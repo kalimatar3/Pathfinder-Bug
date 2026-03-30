@@ -1,0 +1,15 @@
+﻿<Solution>
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="MainAssembly.csproj" />
+  <Project Path="ParticleImage.csproj" />
+  <Project Path="CloudsAssembly.csproj" />
+  <Project Path="WanzyeeStudio.Runtime.csproj" />
+  <Project Path="DOTween.Modules.csproj" />
+  <Project Path="ParticleImage.Editor.csproj" />
+  <Project Path="CloudsEditorAssembly.csproj" />
+  <Project Path="DOTweenPro.EditorScripts.csproj" />
+  <Project Path="DOTweenPro.Scripts.csproj" />
+  <Project Path="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="CommonAssembly.csproj" />
+</Solution>

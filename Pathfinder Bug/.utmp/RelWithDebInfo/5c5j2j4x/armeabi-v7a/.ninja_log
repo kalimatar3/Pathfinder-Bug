@@ -1,0 +1,12 @@
+# ninja log v5
+68	302	7965671638056555	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	1ee4b3dcb91e55cc
+304	816	7965671642325662	C:/ProjectGames/Pathfinder Bug/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5c5j2j4x/obj/armeabi-v7a/libswappywrapper.so	b3f5ee281daab6ce
+20	1649	7965671651467689	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d2f4e70a470b1cec
+6	1710	7965671652081201	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	b444833ef309744d
+27	1755	7965671652477769	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	9568a7bf0a39bc0
+0	1842	7965671653378730	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	feaa69ae556831fa
+55	1961	7965671654639922	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c58e656169ad3559
+43	1981	7965671654828173	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	38bce5da09f35a11
+35	2148	7965671656471532	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	64134a8bb0fe251c
+13	2227	7965671657263526	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	439abdcacde4ca81
+2228	2322	7965671658228775	C:/ProjectGames/Pathfinder Bug/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5c5j2j4x/obj/armeabi-v7a/libgame.so	a27b19f00ceb6b48

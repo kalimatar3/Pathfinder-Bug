@@ -1,0 +1,3012 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9948f3cc49f3904d847ccf1d5daee66, type: 3}
+  m_Name: StageList
+  m_EditorClassIdentifier: MainAssembly::StageListAsset
+  allStages:
+  - stageindex: 0
+    StarGot: 0
+    isLock: 0
+  - stageindex: 1
+    StarGot: 0
+    isLock: 1
+  - stageindex: 2
+    StarGot: 0
+    isLock: 1
+  - stageindex: 3
+    StarGot: 0
+    isLock: 1
+  - stageindex: 4
+    StarGot: 0
+    isLock: 1
+  - stageindex: 5
+    StarGot: 0
+    isLock: 0
+  - stageindex: 6
+    StarGot: 0
+    isLock: 1
+  - stageindex: 7
+    StarGot: 0
+    isLock: 1
+  - stageindex: 8
+    StarGot: 0
+    isLock: 1
+  - stageindex: 9
+    StarGot: 0
+    isLock: 1
+  - stageindex: 10
+    StarGot: 0
+    isLock: 0
+  - stageindex: 11
+    StarGot: 0
+    isLock: 1
+  - stageindex: 12
+    StarGot: 0
+    isLock: 1
+  - stageindex: 13
+    StarGot: 0
+    isLock: 1
+  - stageindex: 14
+    StarGot: 0
+    isLock: 1
+  - stageindex: 15
+    StarGot: 0
+    isLock: 0
+  - stageindex: 16
+    StarGot: 0
+    isLock: 1
+  - stageindex: 17
+    StarGot: 0
+    isLock: 1
+  - stageindex: 18
+    StarGot: 0
+    isLock: 1
+  - stageindex: 19
+    StarGot: 0
+    isLock: 1
+  - stageindex: 20
+    StarGot: 0
+    isLock: 0
+  - stageindex: 21
+    StarGot: 0
+    isLock: 1
+  - stageindex: 22
+    StarGot: 0
+    isLock: 1
+  - stageindex: 23
+    StarGot: 0
+    isLock: 1
+  - stageindex: 24
+    StarGot: 0
+    isLock: 1
+  - stageindex: 25
+    StarGot: 0
+    isLock: 0
+  - stageindex: 26
+    StarGot: 0
+    isLock: 1
+  - stageindex: 27
+    StarGot: 0
+    isLock: 1
+  - stageindex: 28
+    StarGot: 0
+    isLock: 1
+  - stageindex: 29
+    StarGot: 0
+    isLock: 1
+  - stageindex: 30
+    StarGot: 0
+    isLock: 0
+  - stageindex: 31
+    StarGot: 0
+    isLock: 1
+  - stageindex: 32
+    StarGot: 0
+    isLock: 1
+  - stageindex: 33
+    StarGot: 0
+    isLock: 1
+  - stageindex: 34
+    StarGot: 0
+    isLock: 1
+  - stageindex: 35
+    StarGot: 0
+    isLock: 0
+  - stageindex: 36
+    StarGot: 0
+    isLock: 1
+  - stageindex: 37
+    StarGot: 0
+    isLock: 1
+  - stageindex: 38
+    StarGot: 0
+    isLock: 1
+  - stageindex: 39
+    StarGot: 0
+    isLock: 1
+  - stageindex: 40
+    StarGot: 0
+    isLock: 0
+  - stageindex: 41
+    StarGot: 0
+    isLock: 1
+  - stageindex: 42
+    StarGot: 0
+    isLock: 1
+  - stageindex: 43
+    StarGot: 0
+    isLock: 1
+  - stageindex: 44
+    StarGot: 0
+    isLock: 1
+  - stageindex: 45
+    StarGot: 0
+    isLock: 0
+  - stageindex: 46
+    StarGot: 0
+    isLock: 1
+  - stageindex: 47
+    StarGot: 0
+    isLock: 1
+  - stageindex: 48
+    StarGot: 0
+    isLock: 1
+  - stageindex: 49
+    StarGot: 0
+    isLock: 1
+  - stageindex: 50
+    StarGot: 0
+    isLock: 0
+  - stageindex: 51
+    StarGot: 0
+    isLock: 1
+  - stageindex: 52
+    StarGot: 0
+    isLock: 1
+  - stageindex: 53
+    StarGot: 0
+    isLock: 1
+  - stageindex: 54
+    StarGot: 0
+    isLock: 1
+  - stageindex: 55
+    StarGot: 0
+    isLock: 0
+  - stageindex: 56
+    StarGot: 0
+    isLock: 1
+  - stageindex: 57
+    StarGot: 0
+    isLock: 1
+  - stageindex: 58
+    StarGot: 0
+    isLock: 1
+  - stageindex: 59
+    StarGot: 0
+    isLock: 1
+  - stageindex: 60
+    StarGot: 0
+    isLock: 0
+  - stageindex: 61
+    StarGot: 0
+    isLock: 1
+  - stageindex: 62
+    StarGot: 0
+    isLock: 1
+  - stageindex: 63
+    StarGot: 0
+    isLock: 1
+  - stageindex: 64
+    StarGot: 0
+    isLock: 1
+  - stageindex: 65
+    StarGot: 0
+    isLock: 0
+  - stageindex: 66
+    StarGot: 0
+    isLock: 1
+  - stageindex: 67
+    StarGot: 0
+    isLock: 1
+  - stageindex: 68
+    StarGot: 0
+    isLock: 1
+  - stageindex: 69
+    StarGot: 0
+    isLock: 1
+  - stageindex: 70
+    StarGot: 0
+    isLock: 0
+  - stageindex: 71
+    StarGot: 0
+    isLock: 1
+  - stageindex: 72
+    StarGot: 0
+    isLock: 1
+  - stageindex: 73
+    StarGot: 0
+    isLock: 1
+  - stageindex: 74
+    StarGot: 0
+    isLock: 1
+  - stageindex: 75
+    StarGot: 0
+    isLock: 0
+  - stageindex: 76
+    StarGot: 0
+    isLock: 1
+  - stageindex: 77
+    StarGot: 0
+    isLock: 1
+  - stageindex: 78
+    StarGot: 0
+    isLock: 1
+  - stageindex: 79
+    StarGot: 0
+    isLock: 1
+  - stageindex: 80
+    StarGot: 0
+    isLock: 0
+  - stageindex: 81
+    StarGot: 0
+    isLock: 1
+  - stageindex: 82
+    StarGot: 0
+    isLock: 1
+  - stageindex: 83
+    StarGot: 0
+    isLock: 1
+  - stageindex: 84
+    StarGot: 0
+    isLock: 1
+  - stageindex: 85
+    StarGot: 0
+    isLock: 0
+  - stageindex: 86
+    StarGot: 0
+    isLock: 1
+  - stageindex: 87
+    StarGot: 0
+    isLock: 1
+  - stageindex: 88
+    StarGot: 0
+    isLock: 1
+  - stageindex: 89
+    StarGot: 0
+    isLock: 1
+  - stageindex: 90
+    StarGot: 0
+    isLock: 0
+  - stageindex: 91
+    StarGot: 0
+    isLock: 1
+  - stageindex: 92
+    StarGot: 0
+    isLock: 1
+  - stageindex: 93
+    StarGot: 0
+    isLock: 1
+  - stageindex: 94
+    StarGot: 0
+    isLock: 1
+  - stageindex: 95
+    StarGot: 0
+    isLock: 0
+  - stageindex: 96
+    StarGot: 0
+    isLock: 1
+  - stageindex: 97
+    StarGot: 0
+    isLock: 1
+  - stageindex: 98
+    StarGot: 0
+    isLock: 1
+  - stageindex: 99
+    StarGot: 0
+    isLock: 1
+  - stageindex: 100
+    StarGot: 0
+    isLock: 0
+  - stageindex: 101
+    StarGot: 0
+    isLock: 1
+  - stageindex: 102
+    StarGot: 0
+    isLock: 1
+  - stageindex: 103
+    StarGot: 0
+    isLock: 1
+  - stageindex: 104
+    StarGot: 0
+    isLock: 1
+  - stageindex: 105
+    StarGot: 0
+    isLock: 0
+  - stageindex: 106
+    StarGot: 0
+    isLock: 1
+  - stageindex: 107
+    StarGot: 0
+    isLock: 1
+  - stageindex: 108
+    StarGot: 0
+    isLock: 1
+  - stageindex: 109
+    StarGot: 0
+    isLock: 1
+  - stageindex: 110
+    StarGot: 0
+    isLock: 0
+  - stageindex: 111
+    StarGot: 0
+    isLock: 1
+  - stageindex: 112
+    StarGot: 0
+    isLock: 1
+  - stageindex: 113
+    StarGot: 0
+    isLock: 1
+  - stageindex: 114
+    StarGot: 0
+    isLock: 1
+  - stageindex: 115
+    StarGot: 0
+    isLock: 0
+  - stageindex: 116
+    StarGot: 0
+    isLock: 1
+  - stageindex: 117
+    StarGot: 0
+    isLock: 1
+  - stageindex: 118
+    StarGot: 0
+    isLock: 1
+  - stageindex: 119
+    StarGot: 0
+    isLock: 1
+  - stageindex: 120
+    StarGot: 0
+    isLock: 0
+  - stageindex: 121
+    StarGot: 0
+    isLock: 1
+  - stageindex: 122
+    StarGot: 0
+    isLock: 1
+  - stageindex: 123
+    StarGot: 0
+    isLock: 1
+  - stageindex: 124
+    StarGot: 0
+    isLock: 1
+  - stageindex: 125
+    StarGot: 0
+    isLock: 0
+  - stageindex: 126
+    StarGot: 0
+    isLock: 1
+  - stageindex: 127
+    StarGot: 0
+    isLock: 1
+  - stageindex: 128
+    StarGot: 0
+    isLock: 1
+  - stageindex: 129
+    StarGot: 0
+    isLock: 1
+  - stageindex: 130
+    StarGot: 0
+    isLock: 0
+  - stageindex: 131
+    StarGot: 0
+    isLock: 1
+  - stageindex: 132
+    StarGot: 0
+    isLock: 1
+  - stageindex: 133
+    StarGot: 0
+    isLock: 1
+  - stageindex: 134
+    StarGot: 0
+    isLock: 1
+  - stageindex: 135
+    StarGot: 0
+    isLock: 0
+  - stageindex: 136
+    StarGot: 0
+    isLock: 1
+  - stageindex: 137
+    StarGot: 0
+    isLock: 1
+  - stageindex: 138
+    StarGot: 0
+    isLock: 1
+  - stageindex: 139
+    StarGot: 0
+    isLock: 1
+  - stageindex: 140
+    StarGot: 0
+    isLock: 0
+  - stageindex: 141
+    StarGot: 0
+    isLock: 1
+  - stageindex: 142
+    StarGot: 0
+    isLock: 1
+  - stageindex: 143
+    StarGot: 0
+    isLock: 1
+  - stageindex: 144
+    StarGot: 0
+    isLock: 1
+  - stageindex: 145
+    StarGot: 0
+    isLock: 0
+  - stageindex: 146
+    StarGot: 0
+    isLock: 1
+  - stageindex: 147
+    StarGot: 0
+    isLock: 1
+  - stageindex: 148
+    StarGot: 0
+    isLock: 1
+  - stageindex: 149
+    StarGot: 0
+    isLock: 1
+  - stageindex: 150
+    StarGot: 0
+    isLock: 0
+  - stageindex: 151
+    StarGot: 0
+    isLock: 1
+  - stageindex: 152
+    StarGot: 0
+    isLock: 1
+  - stageindex: 153
+    StarGot: 0
+    isLock: 1
+  - stageindex: 154
+    StarGot: 0
+    isLock: 1
+  - stageindex: 155
+    StarGot: 0
+    isLock: 0
+  - stageindex: 156
+    StarGot: 0
+    isLock: 1
+  - stageindex: 157
+    StarGot: 0
+    isLock: 1
+  - stageindex: 158
+    StarGot: 0
+    isLock: 1
+  - stageindex: 159
+    StarGot: 0
+    isLock: 1
+  - stageindex: 160
+    StarGot: 0
+    isLock: 0
+  - stageindex: 161
+    StarGot: 0
+    isLock: 1
+  - stageindex: 162
+    StarGot: 0
+    isLock: 1
+  - stageindex: 163
+    StarGot: 0
+    isLock: 1
+  - stageindex: 164
+    StarGot: 0
+    isLock: 1
+  - stageindex: 165
+    StarGot: 0
+    isLock: 0
+  - stageindex: 166
+    StarGot: 0
+    isLock: 1
+  - stageindex: 167
+    StarGot: 0
+    isLock: 1
+  - stageindex: 168
+    StarGot: 0
+    isLock: 1
+  - stageindex: 169
+    StarGot: 0
+    isLock: 1
+  - stageindex: 170
+    StarGot: 0
+    isLock: 0
+  - stageindex: 171
+    StarGot: 0
+    isLock: 1
+  - stageindex: 172
+    StarGot: 0
+    isLock: 1
+  - stageindex: 173
+    StarGot: 0
+    isLock: 1
+  - stageindex: 174
+    StarGot: 0
+    isLock: 1
+  - stageindex: 175
+    StarGot: 0
+    isLock: 0
+  - stageindex: 176
+    StarGot: 0
+    isLock: 1
+  - stageindex: 177
+    StarGot: 0
+    isLock: 1
+  - stageindex: 178
+    StarGot: 0
+    isLock: 1
+  - stageindex: 179
+    StarGot: 0
+    isLock: 1
+  - stageindex: 180
+    StarGot: 0
+    isLock: 0
+  - stageindex: 181
+    StarGot: 0
+    isLock: 1
+  - stageindex: 182
+    StarGot: 0
+    isLock: 1
+  - stageindex: 183
+    StarGot: 0
+    isLock: 1
+  - stageindex: 184
+    StarGot: 0
+    isLock: 1
+  - stageindex: 185
+    StarGot: 0
+    isLock: 0
+  - stageindex: 186
+    StarGot: 0
+    isLock: 1
+  - stageindex: 187
+    StarGot: 0
+    isLock: 1
+  - stageindex: 188
+    StarGot: 0
+    isLock: 1
+  - stageindex: 189
+    StarGot: 0
+    isLock: 1
+  - stageindex: 190
+    StarGot: 0
+    isLock: 0
+  - stageindex: 191
+    StarGot: 0
+    isLock: 1
+  - stageindex: 192
+    StarGot: 0
+    isLock: 1
+  - stageindex: 193
+    StarGot: 0
+    isLock: 1
+  - stageindex: 194
+    StarGot: 0
+    isLock: 1
+  - stageindex: 195
+    StarGot: 0
+    isLock: 0
+  - stageindex: 196
+    StarGot: 0
+    isLock: 1
+  - stageindex: 197
+    StarGot: 0
+    isLock: 1
+  - stageindex: 198
+    StarGot: 0
+    isLock: 1
+  - stageindex: 199
+    StarGot: 0
+    isLock: 1
+  - stageindex: 200
+    StarGot: 0
+    isLock: 0
+  - stageindex: 201
+    StarGot: 0
+    isLock: 1
+  - stageindex: 202
+    StarGot: 0
+    isLock: 1
+  - stageindex: 203
+    StarGot: 0
+    isLock: 1
+  - stageindex: 204
+    StarGot: 0
+    isLock: 1
+  - stageindex: 205
+    StarGot: 0
+    isLock: 0
+  - stageindex: 206
+    StarGot: 0
+    isLock: 1
+  - stageindex: 207
+    StarGot: 0
+    isLock: 1
+  - stageindex: 208
+    StarGot: 0
+    isLock: 1
+  - stageindex: 209
+    StarGot: 0
+    isLock: 1
+  - stageindex: 210
+    StarGot: 0
+    isLock: 0
+  - stageindex: 211
+    StarGot: 0
+    isLock: 1
+  - stageindex: 212
+    StarGot: 0
+    isLock: 1
+  - stageindex: 213
+    StarGot: 0
+    isLock: 1
+  - stageindex: 214
+    StarGot: 0
+    isLock: 1
+  - stageindex: 215
+    StarGot: 0
+    isLock: 0
+  - stageindex: 216
+    StarGot: 0
+    isLock: 1
+  - stageindex: 217
+    StarGot: 0
+    isLock: 1
+  - stageindex: 218
+    StarGot: 0
+    isLock: 1
+  - stageindex: 219
+    StarGot: 0
+    isLock: 1
+  - stageindex: 220
+    StarGot: 0
+    isLock: 0
+  - stageindex: 221
+    StarGot: 0
+    isLock: 1
+  - stageindex: 222
+    StarGot: 0
+    isLock: 1
+  - stageindex: 223
+    StarGot: 0
+    isLock: 1
+  - stageindex: 224
+    StarGot: 0
+    isLock: 1
+  - stageindex: 225
+    StarGot: 0
+    isLock: 0
+  - stageindex: 226
+    StarGot: 0
+    isLock: 1
+  - stageindex: 227
+    StarGot: 0
+    isLock: 1
+  - stageindex: 228
+    StarGot: 0
+    isLock: 1
+  - stageindex: 229
+    StarGot: 0
+    isLock: 1
+  - stageindex: 230
+    StarGot: 0
+    isLock: 0
+  - stageindex: 231
+    StarGot: 0
+    isLock: 1
+  - stageindex: 232
+    StarGot: 0
+    isLock: 1
+  - stageindex: 233
+    StarGot: 0
+    isLock: 1
+  - stageindex: 234
+    StarGot: 0
+    isLock: 1
+  - stageindex: 235
+    StarGot: 0
+    isLock: 0
+  - stageindex: 236
+    StarGot: 0
+    isLock: 1
+  - stageindex: 237
+    StarGot: 0
+    isLock: 1
+  - stageindex: 238
+    StarGot: 0
+    isLock: 1
+  - stageindex: 239
+    StarGot: 0
+    isLock: 1
+  - stageindex: 240
+    StarGot: 0
+    isLock: 0
+  - stageindex: 241
+    StarGot: 0
+    isLock: 1
+  - stageindex: 242
+    StarGot: 0
+    isLock: 1
+  - stageindex: 243
+    StarGot: 0
+    isLock: 1
+  - stageindex: 244
+    StarGot: 0
+    isLock: 1
+  - stageindex: 245
+    StarGot: 0
+    isLock: 0
+  - stageindex: 246
+    StarGot: 0
+    isLock: 1
+  - stageindex: 247
+    StarGot: 0
+    isLock: 1
+  - stageindex: 248
+    StarGot: 0
+    isLock: 1
+  - stageindex: 249
+    StarGot: 0
+    isLock: 1
+  - stageindex: 250
+    StarGot: 0
+    isLock: 0
+  - stageindex: 251
+    StarGot: 0
+    isLock: 1
+  - stageindex: 252
+    StarGot: 0
+    isLock: 1
+  - stageindex: 253
+    StarGot: 0
+    isLock: 1
+  - stageindex: 254
+    StarGot: 0
+    isLock: 1
+  - stageindex: 255
+    StarGot: 0
+    isLock: 0
+  - stageindex: 256
+    StarGot: 0
+    isLock: 1
+  - stageindex: 257
+    StarGot: 0
+    isLock: 1
+  - stageindex: 258
+    StarGot: 0
+    isLock: 1
+  - stageindex: 259
+    StarGot: 0
+    isLock: 1
+  - stageindex: 260
+    StarGot: 0
+    isLock: 0
+  - stageindex: 261
+    StarGot: 0
+    isLock: 1
+  - stageindex: 262
+    StarGot: 0
+    isLock: 1
+  - stageindex: 263
+    StarGot: 0
+    isLock: 1
+  - stageindex: 264
+    StarGot: 0
+    isLock: 1
+  - stageindex: 265
+    StarGot: 0
+    isLock: 0
+  - stageindex: 266
+    StarGot: 0
+    isLock: 1
+  - stageindex: 267
+    StarGot: 0
+    isLock: 1
+  - stageindex: 268
+    StarGot: 0
+    isLock: 1
+  - stageindex: 269
+    StarGot: 0
+    isLock: 1
+  - stageindex: 270
+    StarGot: 0
+    isLock: 0
+  - stageindex: 271
+    StarGot: 0
+    isLock: 1
+  - stageindex: 272
+    StarGot: 0
+    isLock: 1
+  - stageindex: 273
+    StarGot: 0
+    isLock: 1
+  - stageindex: 274
+    StarGot: 0
+    isLock: 1
+  - stageindex: 275
+    StarGot: 0
+    isLock: 0
+  - stageindex: 276
+    StarGot: 0
+    isLock: 1
+  - stageindex: 277
+    StarGot: 0
+    isLock: 1
+  - stageindex: 278
+    StarGot: 0
+    isLock: 1
+  - stageindex: 279
+    StarGot: 0
+    isLock: 1
+  - stageindex: 280
+    StarGot: 0
+    isLock: 0
+  - stageindex: 281
+    StarGot: 0
+    isLock: 1
+  - stageindex: 282
+    StarGot: 0
+    isLock: 1
+  - stageindex: 283
+    StarGot: 0
+    isLock: 1
+  - stageindex: 284
+    StarGot: 0
+    isLock: 1
+  - stageindex: 285
+    StarGot: 0
+    isLock: 0
+  - stageindex: 286
+    StarGot: 0
+    isLock: 1
+  - stageindex: 287
+    StarGot: 0
+    isLock: 1
+  - stageindex: 288
+    StarGot: 0
+    isLock: 1
+  - stageindex: 289
+    StarGot: 0
+    isLock: 1
+  - stageindex: 290
+    StarGot: 0
+    isLock: 0
+  - stageindex: 291
+    StarGot: 0
+    isLock: 1
+  - stageindex: 292
+    StarGot: 0
+    isLock: 1
+  - stageindex: 293
+    StarGot: 0
+    isLock: 1
+  - stageindex: 294
+    StarGot: 0
+    isLock: 1
+  - stageindex: 295
+    StarGot: 0
+    isLock: 0
+  - stageindex: 296
+    StarGot: 0
+    isLock: 1
+  - stageindex: 297
+    StarGot: 0
+    isLock: 1
+  - stageindex: 298
+    StarGot: 0
+    isLock: 1
+  - stageindex: 299
+    StarGot: 0
+    isLock: 1
+  - stageindex: 300
+    StarGot: 0
+    isLock: 0
+  - stageindex: 301
+    StarGot: 0
+    isLock: 1
+  - stageindex: 302
+    StarGot: 0
+    isLock: 1
+  - stageindex: 303
+    StarGot: 0
+    isLock: 1
+  - stageindex: 304
+    StarGot: 0
+    isLock: 1
+  - stageindex: 305
+    StarGot: 0
+    isLock: 0
+  - stageindex: 306
+    StarGot: 0
+    isLock: 1
+  - stageindex: 307
+    StarGot: 0
+    isLock: 1
+  - stageindex: 308
+    StarGot: 0
+    isLock: 1
+  - stageindex: 309
+    StarGot: 0
+    isLock: 1
+  - stageindex: 310
+    StarGot: 0
+    isLock: 0
+  - stageindex: 311
+    StarGot: 0
+    isLock: 1
+  - stageindex: 312
+    StarGot: 0
+    isLock: 1
+  - stageindex: 313
+    StarGot: 0
+    isLock: 1
+  - stageindex: 314
+    StarGot: 0
+    isLock: 1
+  - stageindex: 315
+    StarGot: 0
+    isLock: 0
+  - stageindex: 316
+    StarGot: 0
+    isLock: 1
+  - stageindex: 317
+    StarGot: 0
+    isLock: 1
+  - stageindex: 318
+    StarGot: 0
+    isLock: 1
+  - stageindex: 319
+    StarGot: 0
+    isLock: 1
+  - stageindex: 320
+    StarGot: 0
+    isLock: 0
+  - stageindex: 321
+    StarGot: 0
+    isLock: 1
+  - stageindex: 322
+    StarGot: 0
+    isLock: 1
+  - stageindex: 323
+    StarGot: 0
+    isLock: 1
+  - stageindex: 324
+    StarGot: 0
+    isLock: 1
+  - stageindex: 325
+    StarGot: 0
+    isLock: 0
+  - stageindex: 326
+    StarGot: 0
+    isLock: 1
+  - stageindex: 327
+    StarGot: 0
+    isLock: 1
+  - stageindex: 328
+    StarGot: 0
+    isLock: 1
+  - stageindex: 329
+    StarGot: 0
+    isLock: 1
+  - stageindex: 330
+    StarGot: 0
+    isLock: 0
+  - stageindex: 331
+    StarGot: 0
+    isLock: 1
+  - stageindex: 332
+    StarGot: 0
+    isLock: 1
+  - stageindex: 333
+    StarGot: 0
+    isLock: 1
+  - stageindex: 334
+    StarGot: 0
+    isLock: 1
+  - stageindex: 335
+    StarGot: 0
+    isLock: 0
+  - stageindex: 336
+    StarGot: 0
+    isLock: 1
+  - stageindex: 337
+    StarGot: 0
+    isLock: 1
+  - stageindex: 338
+    StarGot: 0
+    isLock: 1
+  - stageindex: 339
+    StarGot: 0
+    isLock: 1
+  - stageindex: 340
+    StarGot: 0
+    isLock: 0
+  - stageindex: 341
+    StarGot: 0
+    isLock: 1
+  - stageindex: 342
+    StarGot: 0
+    isLock: 1
+  - stageindex: 343
+    StarGot: 0
+    isLock: 1
+  - stageindex: 344
+    StarGot: 0
+    isLock: 1
+  - stageindex: 345
+    StarGot: 0
+    isLock: 0
+  - stageindex: 346
+    StarGot: 0
+    isLock: 1
+  - stageindex: 347
+    StarGot: 0
+    isLock: 1
+  - stageindex: 348
+    StarGot: 0
+    isLock: 1
+  - stageindex: 349
+    StarGot: 0
+    isLock: 1
+  - stageindex: 350
+    StarGot: 0
+    isLock: 0
+  - stageindex: 351
+    StarGot: 0
+    isLock: 1
+  - stageindex: 352
+    StarGot: 0
+    isLock: 1
+  - stageindex: 353
+    StarGot: 0
+    isLock: 1
+  - stageindex: 354
+    StarGot: 0
+    isLock: 1
+  - stageindex: 355
+    StarGot: 0
+    isLock: 0
+  - stageindex: 356
+    StarGot: 0
+    isLock: 1
+  - stageindex: 357
+    StarGot: 0
+    isLock: 1
+  - stageindex: 358
+    StarGot: 0
+    isLock: 1
+  - stageindex: 359
+    StarGot: 0
+    isLock: 1
+  - stageindex: 360
+    StarGot: 0
+    isLock: 0
+  - stageindex: 361
+    StarGot: 0
+    isLock: 1
+  - stageindex: 362
+    StarGot: 0
+    isLock: 1
+  - stageindex: 363
+    StarGot: 0
+    isLock: 1
+  - stageindex: 364
+    StarGot: 0
+    isLock: 1
+  - stageindex: 365
+    StarGot: 0
+    isLock: 0
+  - stageindex: 366
+    StarGot: 0
+    isLock: 1
+  - stageindex: 367
+    StarGot: 0
+    isLock: 1
+  - stageindex: 368
+    StarGot: 0
+    isLock: 1
+  - stageindex: 369
+    StarGot: 0
+    isLock: 1
+  - stageindex: 370
+    StarGot: 0
+    isLock: 0
+  - stageindex: 371
+    StarGot: 0
+    isLock: 1
+  - stageindex: 372
+    StarGot: 0
+    isLock: 1
+  - stageindex: 373
+    StarGot: 0
+    isLock: 1
+  - stageindex: 374
+    StarGot: 0
+    isLock: 1
+  - stageindex: 375
+    StarGot: 0
+    isLock: 0
+  - stageindex: 376
+    StarGot: 0
+    isLock: 1
+  - stageindex: 377
+    StarGot: 0
+    isLock: 1
+  - stageindex: 378
+    StarGot: 0
+    isLock: 1
+  - stageindex: 379
+    StarGot: 0
+    isLock: 1
+  - stageindex: 380
+    StarGot: 0
+    isLock: 0
+  - stageindex: 381
+    StarGot: 0
+    isLock: 1
+  - stageindex: 382
+    StarGot: 0
+    isLock: 1
+  - stageindex: 383
+    StarGot: 0
+    isLock: 1
+  - stageindex: 384
+    StarGot: 0
+    isLock: 1
+  - stageindex: 385
+    StarGot: 0
+    isLock: 0
+  - stageindex: 386
+    StarGot: 0
+    isLock: 1
+  - stageindex: 387
+    StarGot: 0
+    isLock: 1
+  - stageindex: 388
+    StarGot: 0
+    isLock: 1
+  - stageindex: 389
+    StarGot: 0
+    isLock: 1
+  - stageindex: 390
+    StarGot: 0
+    isLock: 0
+  - stageindex: 391
+    StarGot: 0
+    isLock: 1
+  - stageindex: 392
+    StarGot: 0
+    isLock: 1
+  - stageindex: 393
+    StarGot: 0
+    isLock: 1
+  - stageindex: 394
+    StarGot: 0
+    isLock: 1
+  - stageindex: 395
+    StarGot: 0
+    isLock: 0
+  - stageindex: 396
+    StarGot: 0
+    isLock: 1
+  - stageindex: 397
+    StarGot: 0
+    isLock: 1
+  - stageindex: 398
+    StarGot: 0
+    isLock: 1
+  - stageindex: 399
+    StarGot: 0
+    isLock: 1
+  - stageindex: 400
+    StarGot: 0
+    isLock: 0
+  - stageindex: 401
+    StarGot: 0
+    isLock: 1
+  - stageindex: 402
+    StarGot: 0
+    isLock: 1
+  - stageindex: 403
+    StarGot: 0
+    isLock: 1
+  - stageindex: 404
+    StarGot: 0
+    isLock: 1
+  - stageindex: 405
+    StarGot: 0
+    isLock: 0
+  - stageindex: 406
+    StarGot: 0
+    isLock: 1
+  - stageindex: 407
+    StarGot: 0
+    isLock: 1
+  - stageindex: 408
+    StarGot: 0
+    isLock: 1
+  - stageindex: 409
+    StarGot: 0
+    isLock: 1
+  - stageindex: 410
+    StarGot: 0
+    isLock: 0
+  - stageindex: 411
+    StarGot: 0
+    isLock: 1
+  - stageindex: 412
+    StarGot: 0
+    isLock: 1
+  - stageindex: 413
+    StarGot: 0
+    isLock: 1
+  - stageindex: 414
+    StarGot: 0
+    isLock: 1
+  - stageindex: 415
+    StarGot: 0
+    isLock: 0
+  - stageindex: 416
+    StarGot: 0
+    isLock: 1
+  - stageindex: 417
+    StarGot: 0
+    isLock: 1
+  - stageindex: 418
+    StarGot: 0
+    isLock: 1
+  - stageindex: 419
+    StarGot: 0
+    isLock: 1
+  - stageindex: 420
+    StarGot: 0
+    isLock: 0
+  - stageindex: 421
+    StarGot: 0
+    isLock: 1
+  - stageindex: 422
+    StarGot: 0
+    isLock: 1
+  - stageindex: 423
+    StarGot: 0
+    isLock: 1
+  - stageindex: 424
+    StarGot: 0
+    isLock: 1
+  - stageindex: 425
+    StarGot: 0
+    isLock: 0
+  - stageindex: 426
+    StarGot: 0
+    isLock: 1
+  - stageindex: 427
+    StarGot: 0
+    isLock: 1
+  - stageindex: 428
+    StarGot: 0
+    isLock: 1
+  - stageindex: 429
+    StarGot: 0
+    isLock: 1
+  - stageindex: 430
+    StarGot: 0
+    isLock: 0
+  - stageindex: 431
+    StarGot: 0
+    isLock: 1
+  - stageindex: 432
+    StarGot: 0
+    isLock: 1
+  - stageindex: 433
+    StarGot: 0
+    isLock: 1
+  - stageindex: 434
+    StarGot: 0
+    isLock: 1
+  - stageindex: 435
+    StarGot: 0
+    isLock: 0
+  - stageindex: 436
+    StarGot: 0
+    isLock: 1
+  - stageindex: 437
+    StarGot: 0
+    isLock: 1
+  - stageindex: 438
+    StarGot: 0
+    isLock: 1
+  - stageindex: 439
+    StarGot: 0
+    isLock: 1
+  - stageindex: 440
+    StarGot: 0
+    isLock: 0
+  - stageindex: 441
+    StarGot: 0
+    isLock: 1
+  - stageindex: 442
+    StarGot: 0
+    isLock: 1
+  - stageindex: 443
+    StarGot: 0
+    isLock: 1
+  - stageindex: 444
+    StarGot: 0
+    isLock: 1
+  - stageindex: 445
+    StarGot: 0
+    isLock: 0
+  - stageindex: 446
+    StarGot: 0
+    isLock: 1
+  - stageindex: 447
+    StarGot: 0
+    isLock: 1
+  - stageindex: 448
+    StarGot: 0
+    isLock: 1
+  - stageindex: 449
+    StarGot: 0
+    isLock: 1
+  - stageindex: 450
+    StarGot: 0
+    isLock: 0
+  - stageindex: 451
+    StarGot: 0
+    isLock: 1
+  - stageindex: 452
+    StarGot: 0
+    isLock: 1
+  - stageindex: 453
+    StarGot: 0
+    isLock: 1
+  - stageindex: 454
+    StarGot: 0
+    isLock: 1
+  - stageindex: 455
+    StarGot: 0
+    isLock: 0
+  - stageindex: 456
+    StarGot: 0
+    isLock: 1
+  - stageindex: 457
+    StarGot: 0
+    isLock: 1
+  - stageindex: 458
+    StarGot: 0
+    isLock: 1
+  - stageindex: 459
+    StarGot: 0
+    isLock: 1
+  - stageindex: 460
+    StarGot: 0
+    isLock: 0
+  - stageindex: 461
+    StarGot: 0
+    isLock: 1
+  - stageindex: 462
+    StarGot: 0
+    isLock: 1
+  - stageindex: 463
+    StarGot: 0
+    isLock: 1
+  - stageindex: 464
+    StarGot: 0
+    isLock: 1
+  - stageindex: 465
+    StarGot: 0
+    isLock: 0
+  - stageindex: 466
+    StarGot: 0
+    isLock: 1
+  - stageindex: 467
+    StarGot: 0
+    isLock: 1
+  - stageindex: 468
+    StarGot: 0
+    isLock: 1
+  - stageindex: 469
+    StarGot: 0
+    isLock: 1
+  - stageindex: 470
+    StarGot: 0
+    isLock: 0
+  - stageindex: 471
+    StarGot: 0
+    isLock: 1
+  - stageindex: 472
+    StarGot: 0
+    isLock: 1
+  - stageindex: 473
+    StarGot: 0
+    isLock: 1
+  - stageindex: 474
+    StarGot: 0
+    isLock: 1
+  - stageindex: 475
+    StarGot: 0
+    isLock: 0
+  - stageindex: 476
+    StarGot: 0
+    isLock: 1
+  - stageindex: 477
+    StarGot: 0
+    isLock: 1
+  - stageindex: 478
+    StarGot: 0
+    isLock: 1
+  - stageindex: 479
+    StarGot: 0
+    isLock: 1
+  - stageindex: 480
+    StarGot: 0
+    isLock: 0
+  - stageindex: 481
+    StarGot: 0
+    isLock: 1
+  - stageindex: 482
+    StarGot: 0
+    isLock: 1
+  - stageindex: 483
+    StarGot: 0
+    isLock: 1
+  - stageindex: 484
+    StarGot: 0
+    isLock: 1
+  - stageindex: 485
+    StarGot: 0
+    isLock: 0
+  - stageindex: 486
+    StarGot: 0
+    isLock: 1
+  - stageindex: 487
+    StarGot: 0
+    isLock: 1
+  - stageindex: 488
+    StarGot: 0
+    isLock: 1
+  - stageindex: 489
+    StarGot: 0
+    isLock: 1
+  - stageindex: 490
+    StarGot: 0
+    isLock: 0
+  - stageindex: 491
+    StarGot: 0
+    isLock: 1
+  - stageindex: 492
+    StarGot: 0
+    isLock: 1
+  - stageindex: 493
+    StarGot: 0
+    isLock: 1
+  - stageindex: 494
+    StarGot: 0
+    isLock: 1
+  - stageindex: 495
+    StarGot: 0
+    isLock: 0
+  - stageindex: 496
+    StarGot: 0
+    isLock: 1
+  - stageindex: 497
+    StarGot: 0
+    isLock: 1
+  - stageindex: 498
+    StarGot: 0
+    isLock: 1
+  - stageindex: 499
+    StarGot: 0
+    isLock: 1
+  - stageindex: 500
+    StarGot: 0
+    isLock: 0
+  - stageindex: 501
+    StarGot: 0
+    isLock: 1
+  - stageindex: 502
+    StarGot: 0
+    isLock: 1
+  - stageindex: 503
+    StarGot: 0
+    isLock: 1
+  - stageindex: 504
+    StarGot: 0
+    isLock: 1
+  - stageindex: 505
+    StarGot: 0
+    isLock: 0
+  - stageindex: 506
+    StarGot: 0
+    isLock: 1
+  - stageindex: 507
+    StarGot: 0
+    isLock: 1
+  - stageindex: 508
+    StarGot: 0
+    isLock: 1
+  - stageindex: 509
+    StarGot: 0
+    isLock: 1
+  - stageindex: 510
+    StarGot: 0
+    isLock: 0
+  - stageindex: 511
+    StarGot: 0
+    isLock: 1
+  - stageindex: 512
+    StarGot: 0
+    isLock: 1
+  - stageindex: 513
+    StarGot: 0
+    isLock: 1
+  - stageindex: 514
+    StarGot: 0
+    isLock: 1
+  - stageindex: 515
+    StarGot: 0
+    isLock: 0
+  - stageindex: 516
+    StarGot: 0
+    isLock: 1
+  - stageindex: 517
+    StarGot: 0
+    isLock: 1
+  - stageindex: 518
+    StarGot: 0
+    isLock: 1
+  - stageindex: 519
+    StarGot: 0
+    isLock: 1
+  - stageindex: 520
+    StarGot: 0
+    isLock: 0
+  - stageindex: 521
+    StarGot: 0
+    isLock: 1
+  - stageindex: 522
+    StarGot: 0
+    isLock: 1
+  - stageindex: 523
+    StarGot: 0
+    isLock: 1
+  - stageindex: 524
+    StarGot: 0
+    isLock: 1
+  - stageindex: 525
+    StarGot: 0
+    isLock: 0
+  - stageindex: 526
+    StarGot: 0
+    isLock: 1
+  - stageindex: 527
+    StarGot: 0
+    isLock: 1
+  - stageindex: 528
+    StarGot: 0
+    isLock: 1
+  - stageindex: 529
+    StarGot: 0
+    isLock: 1
+  - stageindex: 530
+    StarGot: 0
+    isLock: 0
+  - stageindex: 531
+    StarGot: 0
+    isLock: 1
+  - stageindex: 532
+    StarGot: 0
+    isLock: 1
+  - stageindex: 533
+    StarGot: 0
+    isLock: 1
+  - stageindex: 534
+    StarGot: 0
+    isLock: 1
+  - stageindex: 535
+    StarGot: 0
+    isLock: 0
+  - stageindex: 536
+    StarGot: 0
+    isLock: 1
+  - stageindex: 537
+    StarGot: 0
+    isLock: 1
+  - stageindex: 538
+    StarGot: 0
+    isLock: 1
+  - stageindex: 539
+    StarGot: 0
+    isLock: 1
+  - stageindex: 540
+    StarGot: 0
+    isLock: 0
+  - stageindex: 541
+    StarGot: 0
+    isLock: 1
+  - stageindex: 542
+    StarGot: 0
+    isLock: 1
+  - stageindex: 543
+    StarGot: 0
+    isLock: 1
+  - stageindex: 544
+    StarGot: 0
+    isLock: 1
+  - stageindex: 545
+    StarGot: 0
+    isLock: 0
+  - stageindex: 546
+    StarGot: 0
+    isLock: 1
+  - stageindex: 547
+    StarGot: 0
+    isLock: 1
+  - stageindex: 548
+    StarGot: 0
+    isLock: 1
+  - stageindex: 549
+    StarGot: 0
+    isLock: 1
+  - stageindex: 550
+    StarGot: 0
+    isLock: 0
+  - stageindex: 551
+    StarGot: 0
+    isLock: 1
+  - stageindex: 552
+    StarGot: 0
+    isLock: 1
+  - stageindex: 553
+    StarGot: 0
+    isLock: 1
+  - stageindex: 554
+    StarGot: 0
+    isLock: 1
+  - stageindex: 555
+    StarGot: 0
+    isLock: 0
+  - stageindex: 556
+    StarGot: 0
+    isLock: 1
+  - stageindex: 557
+    StarGot: 0
+    isLock: 1
+  - stageindex: 558
+    StarGot: 0
+    isLock: 1
+  - stageindex: 559
+    StarGot: 0
+    isLock: 1
+  - stageindex: 560
+    StarGot: 0
+    isLock: 0
+  - stageindex: 561
+    StarGot: 0
+    isLock: 1
+  - stageindex: 562
+    StarGot: 0
+    isLock: 1
+  - stageindex: 563
+    StarGot: 0
+    isLock: 1
+  - stageindex: 564
+    StarGot: 0
+    isLock: 1
+  - stageindex: 565
+    StarGot: 0
+    isLock: 0
+  - stageindex: 566
+    StarGot: 0
+    isLock: 1
+  - stageindex: 567
+    StarGot: 0
+    isLock: 1
+  - stageindex: 568
+    StarGot: 0
+    isLock: 1
+  - stageindex: 569
+    StarGot: 0
+    isLock: 1
+  - stageindex: 570
+    StarGot: 0
+    isLock: 0
+  - stageindex: 571
+    StarGot: 0
+    isLock: 1
+  - stageindex: 572
+    StarGot: 0
+    isLock: 1
+  - stageindex: 573
+    StarGot: 0
+    isLock: 1
+  - stageindex: 574
+    StarGot: 0
+    isLock: 1
+  - stageindex: 575
+    StarGot: 0
+    isLock: 0
+  - stageindex: 576
+    StarGot: 0
+    isLock: 1
+  - stageindex: 577
+    StarGot: 0
+    isLock: 1
+  - stageindex: 578
+    StarGot: 0
+    isLock: 1
+  - stageindex: 579
+    StarGot: 0
+    isLock: 1
+  - stageindex: 580
+    StarGot: 0
+    isLock: 0
+  - stageindex: 581
+    StarGot: 0
+    isLock: 1
+  - stageindex: 582
+    StarGot: 0
+    isLock: 1
+  - stageindex: 583
+    StarGot: 0
+    isLock: 1
+  - stageindex: 584
+    StarGot: 0
+    isLock: 1
+  - stageindex: 585
+    StarGot: 0
+    isLock: 0
+  - stageindex: 586
+    StarGot: 0
+    isLock: 1
+  - stageindex: 587
+    StarGot: 0
+    isLock: 1
+  - stageindex: 588
+    StarGot: 0
+    isLock: 1
+  - stageindex: 589
+    StarGot: 0
+    isLock: 1
+  - stageindex: 590
+    StarGot: 0
+    isLock: 0
+  - stageindex: 591
+    StarGot: 0
+    isLock: 1
+  - stageindex: 592
+    StarGot: 0
+    isLock: 1
+  - stageindex: 593
+    StarGot: 0
+    isLock: 1
+  - stageindex: 594
+    StarGot: 0
+    isLock: 1
+  - stageindex: 595
+    StarGot: 0
+    isLock: 0
+  - stageindex: 596
+    StarGot: 0
+    isLock: 1
+  - stageindex: 597
+    StarGot: 0
+    isLock: 1
+  - stageindex: 598
+    StarGot: 0
+    isLock: 1
+  - stageindex: 599
+    StarGot: 0
+    isLock: 1
+  - stageindex: 600
+    StarGot: 0
+    isLock: 0
+  - stageindex: 601
+    StarGot: 0
+    isLock: 1
+  - stageindex: 602
+    StarGot: 0
+    isLock: 1
+  - stageindex: 603
+    StarGot: 0
+    isLock: 1
+  - stageindex: 604
+    StarGot: 0
+    isLock: 1
+  - stageindex: 605
+    StarGot: 0
+    isLock: 0
+  - stageindex: 606
+    StarGot: 0
+    isLock: 1
+  - stageindex: 607
+    StarGot: 0
+    isLock: 1
+  - stageindex: 608
+    StarGot: 0
+    isLock: 1
+  - stageindex: 609
+    StarGot: 0
+    isLock: 1
+  - stageindex: 610
+    StarGot: 0
+    isLock: 0
+  - stageindex: 611
+    StarGot: 0
+    isLock: 1
+  - stageindex: 612
+    StarGot: 0
+    isLock: 1
+  - stageindex: 613
+    StarGot: 0
+    isLock: 1
+  - stageindex: 614
+    StarGot: 0
+    isLock: 1
+  - stageindex: 615
+    StarGot: 0
+    isLock: 0
+  - stageindex: 616
+    StarGot: 0
+    isLock: 1
+  - stageindex: 617
+    StarGot: 0
+    isLock: 1
+  - stageindex: 618
+    StarGot: 0
+    isLock: 1
+  - stageindex: 619
+    StarGot: 0
+    isLock: 1
+  - stageindex: 620
+    StarGot: 0
+    isLock: 0
+  - stageindex: 621
+    StarGot: 0
+    isLock: 1
+  - stageindex: 622
+    StarGot: 0
+    isLock: 1
+  - stageindex: 623
+    StarGot: 0
+    isLock: 1
+  - stageindex: 624
+    StarGot: 0
+    isLock: 1
+  - stageindex: 625
+    StarGot: 0
+    isLock: 0
+  - stageindex: 626
+    StarGot: 0
+    isLock: 1
+  - stageindex: 627
+    StarGot: 0
+    isLock: 1
+  - stageindex: 628
+    StarGot: 0
+    isLock: 1
+  - stageindex: 629
+    StarGot: 0
+    isLock: 1
+  - stageindex: 630
+    StarGot: 0
+    isLock: 0
+  - stageindex: 631
+    StarGot: 0
+    isLock: 1
+  - stageindex: 632
+    StarGot: 0
+    isLock: 1
+  - stageindex: 633
+    StarGot: 0
+    isLock: 1
+  - stageindex: 634
+    StarGot: 0
+    isLock: 1
+  - stageindex: 635
+    StarGot: 0
+    isLock: 0
+  - stageindex: 636
+    StarGot: 0
+    isLock: 1
+  - stageindex: 637
+    StarGot: 0
+    isLock: 1
+  - stageindex: 638
+    StarGot: 0
+    isLock: 1
+  - stageindex: 639
+    StarGot: 0
+    isLock: 1
+  - stageindex: 640
+    StarGot: 0
+    isLock: 0
+  - stageindex: 641
+    StarGot: 0
+    isLock: 1
+  - stageindex: 642
+    StarGot: 0
+    isLock: 1
+  - stageindex: 643
+    StarGot: 0
+    isLock: 1
+  - stageindex: 644
+    StarGot: 0
+    isLock: 1
+  - stageindex: 645
+    StarGot: 0
+    isLock: 0
+  - stageindex: 646
+    StarGot: 0
+    isLock: 1
+  - stageindex: 647
+    StarGot: 0
+    isLock: 1
+  - stageindex: 648
+    StarGot: 0
+    isLock: 1
+  - stageindex: 649
+    StarGot: 0
+    isLock: 1
+  - stageindex: 650
+    StarGot: 0
+    isLock: 0
+  - stageindex: 651
+    StarGot: 0
+    isLock: 1
+  - stageindex: 652
+    StarGot: 0
+    isLock: 1
+  - stageindex: 653
+    StarGot: 0
+    isLock: 1
+  - stageindex: 654
+    StarGot: 0
+    isLock: 1
+  - stageindex: 655
+    StarGot: 0
+    isLock: 0
+  - stageindex: 656
+    StarGot: 0
+    isLock: 1
+  - stageindex: 657
+    StarGot: 0
+    isLock: 1
+  - stageindex: 658
+    StarGot: 0
+    isLock: 1
+  - stageindex: 659
+    StarGot: 0
+    isLock: 1
+  - stageindex: 660
+    StarGot: 0
+    isLock: 0
+  - stageindex: 661
+    StarGot: 0
+    isLock: 1
+  - stageindex: 662
+    StarGot: 0
+    isLock: 1
+  - stageindex: 663
+    StarGot: 0
+    isLock: 1
+  - stageindex: 664
+    StarGot: 0
+    isLock: 1
+  - stageindex: 665
+    StarGot: 0
+    isLock: 0
+  - stageindex: 666
+    StarGot: 0
+    isLock: 1
+  - stageindex: 667
+    StarGot: 0
+    isLock: 1
+  - stageindex: 668
+    StarGot: 0
+    isLock: 1
+  - stageindex: 669
+    StarGot: 0
+    isLock: 1
+  - stageindex: 670
+    StarGot: 0
+    isLock: 0
+  - stageindex: 671
+    StarGot: 0
+    isLock: 1
+  - stageindex: 672
+    StarGot: 0
+    isLock: 1
+  - stageindex: 673
+    StarGot: 0
+    isLock: 1
+  - stageindex: 674
+    StarGot: 0
+    isLock: 1
+  - stageindex: 675
+    StarGot: 0
+    isLock: 0
+  - stageindex: 676
+    StarGot: 0
+    isLock: 1
+  - stageindex: 677
+    StarGot: 0
+    isLock: 1
+  - stageindex: 678
+    StarGot: 0
+    isLock: 1
+  - stageindex: 679
+    StarGot: 0
+    isLock: 1
+  - stageindex: 680
+    StarGot: 0
+    isLock: 0
+  - stageindex: 681
+    StarGot: 0
+    isLock: 1
+  - stageindex: 682
+    StarGot: 0
+    isLock: 1
+  - stageindex: 683
+    StarGot: 0
+    isLock: 1
+  - stageindex: 684
+    StarGot: 0
+    isLock: 1
+  - stageindex: 685
+    StarGot: 0
+    isLock: 0
+  - stageindex: 686
+    StarGot: 0
+    isLock: 1
+  - stageindex: 687
+    StarGot: 0
+    isLock: 1
+  - stageindex: 688
+    StarGot: 0
+    isLock: 1
+  - stageindex: 689
+    StarGot: 0
+    isLock: 1
+  - stageindex: 690
+    StarGot: 0
+    isLock: 0
+  - stageindex: 691
+    StarGot: 0
+    isLock: 1
+  - stageindex: 692
+    StarGot: 0
+    isLock: 1
+  - stageindex: 693
+    StarGot: 0
+    isLock: 1
+  - stageindex: 694
+    StarGot: 0
+    isLock: 1
+  - stageindex: 695
+    StarGot: 0
+    isLock: 0
+  - stageindex: 696
+    StarGot: 0
+    isLock: 1
+  - stageindex: 697
+    StarGot: 0
+    isLock: 1
+  - stageindex: 698
+    StarGot: 0
+    isLock: 1
+  - stageindex: 699
+    StarGot: 0
+    isLock: 1
+  - stageindex: 700
+    StarGot: 0
+    isLock: 0
+  - stageindex: 701
+    StarGot: 0
+    isLock: 1
+  - stageindex: 702
+    StarGot: 0
+    isLock: 1
+  - stageindex: 703
+    StarGot: 0
+    isLock: 1
+  - stageindex: 704
+    StarGot: 0
+    isLock: 1
+  - stageindex: 705
+    StarGot: 0
+    isLock: 0
+  - stageindex: 706
+    StarGot: 0
+    isLock: 1
+  - stageindex: 707
+    StarGot: 0
+    isLock: 1
+  - stageindex: 708
+    StarGot: 0
+    isLock: 1
+  - stageindex: 709
+    StarGot: 0
+    isLock: 1
+  - stageindex: 710
+    StarGot: 0
+    isLock: 0
+  - stageindex: 711
+    StarGot: 0
+    isLock: 1
+  - stageindex: 712
+    StarGot: 0
+    isLock: 1
+  - stageindex: 713
+    StarGot: 0
+    isLock: 1
+  - stageindex: 714
+    StarGot: 0
+    isLock: 1
+  - stageindex: 715
+    StarGot: 0
+    isLock: 0
+  - stageindex: 716
+    StarGot: 0
+    isLock: 1
+  - stageindex: 717
+    StarGot: 0
+    isLock: 1
+  - stageindex: 718
+    StarGot: 0
+    isLock: 1
+  - stageindex: 719
+    StarGot: 0
+    isLock: 1
+  - stageindex: 720
+    StarGot: 0
+    isLock: 0
+  - stageindex: 721
+    StarGot: 0
+    isLock: 1
+  - stageindex: 722
+    StarGot: 0
+    isLock: 1
+  - stageindex: 723
+    StarGot: 0
+    isLock: 1
+  - stageindex: 724
+    StarGot: 0
+    isLock: 1
+  - stageindex: 725
+    StarGot: 0
+    isLock: 0
+  - stageindex: 726
+    StarGot: 0
+    isLock: 1
+  - stageindex: 727
+    StarGot: 0
+    isLock: 1
+  - stageindex: 728
+    StarGot: 0
+    isLock: 1
+  - stageindex: 729
+    StarGot: 0
+    isLock: 1
+  - stageindex: 730
+    StarGot: 0
+    isLock: 0
+  - stageindex: 731
+    StarGot: 0
+    isLock: 1
+  - stageindex: 732
+    StarGot: 0
+    isLock: 1
+  - stageindex: 733
+    StarGot: 0
+    isLock: 1
+  - stageindex: 734
+    StarGot: 0
+    isLock: 1
+  - stageindex: 735
+    StarGot: 0
+    isLock: 0
+  - stageindex: 736
+    StarGot: 0
+    isLock: 1
+  - stageindex: 737
+    StarGot: 0
+    isLock: 1
+  - stageindex: 738
+    StarGot: 0
+    isLock: 1
+  - stageindex: 739
+    StarGot: 0
+    isLock: 1
+  - stageindex: 740
+    StarGot: 0
+    isLock: 0
+  - stageindex: 741
+    StarGot: 0
+    isLock: 1
+  - stageindex: 742
+    StarGot: 0
+    isLock: 1
+  - stageindex: 743
+    StarGot: 0
+    isLock: 1
+  - stageindex: 744
+    StarGot: 0
+    isLock: 1
+  - stageindex: 745
+    StarGot: 0
+    isLock: 0
+  - stageindex: 746
+    StarGot: 0
+    isLock: 1
+  - stageindex: 747
+    StarGot: 0
+    isLock: 1
+  - stageindex: 748
+    StarGot: 0
+    isLock: 1
+  - stageindex: 749
+    StarGot: 0
+    isLock: 1
+  - stageindex: 750
+    StarGot: 0
+    isLock: 0
+  - stageindex: 751
+    StarGot: 0
+    isLock: 1
+  - stageindex: 752
+    StarGot: 0
+    isLock: 1
+  - stageindex: 753
+    StarGot: 0
+    isLock: 1
+  - stageindex: 754
+    StarGot: 0
+    isLock: 1
+  - stageindex: 755
+    StarGot: 0
+    isLock: 0
+  - stageindex: 756
+    StarGot: 0
+    isLock: 1
+  - stageindex: 757
+    StarGot: 0
+    isLock: 1
+  - stageindex: 758
+    StarGot: 0
+    isLock: 1
+  - stageindex: 759
+    StarGot: 0
+    isLock: 1
+  - stageindex: 760
+    StarGot: 0
+    isLock: 0
+  - stageindex: 761
+    StarGot: 0
+    isLock: 1
+  - stageindex: 762
+    StarGot: 0
+    isLock: 1
+  - stageindex: 763
+    StarGot: 0
+    isLock: 1
+  - stageindex: 764
+    StarGot: 0
+    isLock: 1
+  - stageindex: 765
+    StarGot: 0
+    isLock: 0
+  - stageindex: 766
+    StarGot: 0
+    isLock: 1
+  - stageindex: 767
+    StarGot: 0
+    isLock: 1
+  - stageindex: 768
+    StarGot: 0
+    isLock: 1
+  - stageindex: 769
+    StarGot: 0
+    isLock: 1
+  - stageindex: 770
+    StarGot: 0
+    isLock: 0
+  - stageindex: 771
+    StarGot: 0
+    isLock: 1
+  - stageindex: 772
+    StarGot: 0
+    isLock: 1
+  - stageindex: 773
+    StarGot: 0
+    isLock: 1
+  - stageindex: 774
+    StarGot: 0
+    isLock: 1
+  - stageindex: 775
+    StarGot: 0
+    isLock: 0
+  - stageindex: 776
+    StarGot: 0
+    isLock: 1
+  - stageindex: 777
+    StarGot: 0
+    isLock: 1
+  - stageindex: 778
+    StarGot: 0
+    isLock: 1
+  - stageindex: 779
+    StarGot: 0
+    isLock: 1
+  - stageindex: 780
+    StarGot: 0
+    isLock: 0
+  - stageindex: 781
+    StarGot: 0
+    isLock: 1
+  - stageindex: 782
+    StarGot: 0
+    isLock: 1
+  - stageindex: 783
+    StarGot: 0
+    isLock: 1
+  - stageindex: 784
+    StarGot: 0
+    isLock: 1
+  - stageindex: 785
+    StarGot: 0
+    isLock: 0
+  - stageindex: 786
+    StarGot: 0
+    isLock: 1
+  - stageindex: 787
+    StarGot: 0
+    isLock: 1
+  - stageindex: 788
+    StarGot: 0
+    isLock: 1
+  - stageindex: 789
+    StarGot: 0
+    isLock: 1
+  - stageindex: 790
+    StarGot: 0
+    isLock: 0
+  - stageindex: 791
+    StarGot: 0
+    isLock: 1
+  - stageindex: 792
+    StarGot: 0
+    isLock: 1
+  - stageindex: 793
+    StarGot: 0
+    isLock: 1
+  - stageindex: 794
+    StarGot: 0
+    isLock: 1
+  - stageindex: 795
+    StarGot: 0
+    isLock: 0
+  - stageindex: 796
+    StarGot: 0
+    isLock: 1
+  - stageindex: 797
+    StarGot: 0
+    isLock: 1
+  - stageindex: 798
+    StarGot: 0
+    isLock: 1
+  - stageindex: 799
+    StarGot: 0
+    isLock: 1
+  - stageindex: 800
+    StarGot: 0
+    isLock: 0
+  - stageindex: 801
+    StarGot: 0
+    isLock: 1
+  - stageindex: 802
+    StarGot: 0
+    isLock: 1
+  - stageindex: 803
+    StarGot: 0
+    isLock: 1
+  - stageindex: 804
+    StarGot: 0
+    isLock: 1
+  - stageindex: 805
+    StarGot: 0
+    isLock: 0
+  - stageindex: 806
+    StarGot: 0
+    isLock: 1
+  - stageindex: 807
+    StarGot: 0
+    isLock: 1
+  - stageindex: 808
+    StarGot: 0
+    isLock: 1
+  - stageindex: 809
+    StarGot: 0
+    isLock: 1
+  - stageindex: 810
+    StarGot: 0
+    isLock: 0
+  - stageindex: 811
+    StarGot: 0
+    isLock: 1
+  - stageindex: 812
+    StarGot: 0
+    isLock: 1
+  - stageindex: 813
+    StarGot: 0
+    isLock: 1
+  - stageindex: 814
+    StarGot: 0
+    isLock: 1
+  - stageindex: 815
+    StarGot: 0
+    isLock: 0
+  - stageindex: 816
+    StarGot: 0
+    isLock: 1
+  - stageindex: 817
+    StarGot: 0
+    isLock: 1
+  - stageindex: 818
+    StarGot: 0
+    isLock: 1
+  - stageindex: 819
+    StarGot: 0
+    isLock: 1
+  - stageindex: 820
+    StarGot: 0
+    isLock: 0
+  - stageindex: 821
+    StarGot: 0
+    isLock: 1
+  - stageindex: 822
+    StarGot: 0
+    isLock: 1
+  - stageindex: 823
+    StarGot: 0
+    isLock: 1
+  - stageindex: 824
+    StarGot: 0
+    isLock: 1
+  - stageindex: 825
+    StarGot: 0
+    isLock: 0
+  - stageindex: 826
+    StarGot: 0
+    isLock: 1
+  - stageindex: 827
+    StarGot: 0
+    isLock: 1
+  - stageindex: 828
+    StarGot: 0
+    isLock: 1
+  - stageindex: 829
+    StarGot: 0
+    isLock: 1
+  - stageindex: 830
+    StarGot: 0
+    isLock: 0
+  - stageindex: 831
+    StarGot: 0
+    isLock: 1
+  - stageindex: 832
+    StarGot: 0
+    isLock: 1
+  - stageindex: 833
+    StarGot: 0
+    isLock: 1
+  - stageindex: 834
+    StarGot: 0
+    isLock: 1
+  - stageindex: 835
+    StarGot: 0
+    isLock: 0
+  - stageindex: 836
+    StarGot: 0
+    isLock: 1
+  - stageindex: 837
+    StarGot: 0
+    isLock: 1
+  - stageindex: 838
+    StarGot: 0
+    isLock: 1
+  - stageindex: 839
+    StarGot: 0
+    isLock: 1
+  - stageindex: 840
+    StarGot: 0
+    isLock: 0
+  - stageindex: 841
+    StarGot: 0
+    isLock: 1
+  - stageindex: 842
+    StarGot: 0
+    isLock: 1
+  - stageindex: 843
+    StarGot: 0
+    isLock: 1
+  - stageindex: 844
+    StarGot: 0
+    isLock: 1
+  - stageindex: 845
+    StarGot: 0
+    isLock: 0
+  - stageindex: 846
+    StarGot: 0
+    isLock: 1
+  - stageindex: 847
+    StarGot: 0
+    isLock: 1
+  - stageindex: 848
+    StarGot: 0
+    isLock: 1
+  - stageindex: 849
+    StarGot: 0
+    isLock: 1
+  - stageindex: 850
+    StarGot: 0
+    isLock: 0
+  - stageindex: 851
+    StarGot: 0
+    isLock: 1
+  - stageindex: 852
+    StarGot: 0
+    isLock: 1
+  - stageindex: 853
+    StarGot: 0
+    isLock: 1
+  - stageindex: 854
+    StarGot: 0
+    isLock: 1
+  - stageindex: 855
+    StarGot: 0
+    isLock: 0
+  - stageindex: 856
+    StarGot: 0
+    isLock: 1
+  - stageindex: 857
+    StarGot: 0
+    isLock: 1
+  - stageindex: 858
+    StarGot: 0
+    isLock: 1
+  - stageindex: 859
+    StarGot: 0
+    isLock: 1
+  - stageindex: 860
+    StarGot: 0
+    isLock: 0
+  - stageindex: 861
+    StarGot: 0
+    isLock: 1
+  - stageindex: 862
+    StarGot: 0
+    isLock: 1
+  - stageindex: 863
+    StarGot: 0
+    isLock: 1
+  - stageindex: 864
+    StarGot: 0
+    isLock: 1
+  - stageindex: 865
+    StarGot: 0
+    isLock: 0
+  - stageindex: 866
+    StarGot: 0
+    isLock: 1
+  - stageindex: 867
+    StarGot: 0
+    isLock: 1
+  - stageindex: 868
+    StarGot: 0
+    isLock: 1
+  - stageindex: 869
+    StarGot: 0
+    isLock: 1
+  - stageindex: 870
+    StarGot: 0
+    isLock: 0
+  - stageindex: 871
+    StarGot: 0
+    isLock: 1
+  - stageindex: 872
+    StarGot: 0
+    isLock: 1
+  - stageindex: 873
+    StarGot: 0
+    isLock: 1
+  - stageindex: 874
+    StarGot: 0
+    isLock: 1
+  - stageindex: 875
+    StarGot: 0
+    isLock: 0
+  - stageindex: 876
+    StarGot: 0
+    isLock: 1
+  - stageindex: 877
+    StarGot: 0
+    isLock: 1
+  - stageindex: 878
+    StarGot: 0
+    isLock: 1
+  - stageindex: 879
+    StarGot: 0
+    isLock: 1
+  - stageindex: 880
+    StarGot: 0
+    isLock: 0
+  - stageindex: 881
+    StarGot: 0
+    isLock: 1
+  - stageindex: 882
+    StarGot: 0
+    isLock: 1
+  - stageindex: 883
+    StarGot: 0
+    isLock: 1
+  - stageindex: 884
+    StarGot: 0
+    isLock: 1
+  - stageindex: 885
+    StarGot: 0
+    isLock: 0
+  - stageindex: 886
+    StarGot: 0
+    isLock: 1
+  - stageindex: 887
+    StarGot: 0
+    isLock: 1
+  - stageindex: 888
+    StarGot: 0
+    isLock: 1
+  - stageindex: 889
+    StarGot: 0
+    isLock: 1
+  - stageindex: 890
+    StarGot: 0
+    isLock: 0
+  - stageindex: 891
+    StarGot: 0
+    isLock: 1
+  - stageindex: 892
+    StarGot: 0
+    isLock: 1
+  - stageindex: 893
+    StarGot: 0
+    isLock: 1
+  - stageindex: 894
+    StarGot: 0
+    isLock: 1
+  - stageindex: 895
+    StarGot: 0
+    isLock: 0
+  - stageindex: 896
+    StarGot: 0
+    isLock: 1
+  - stageindex: 897
+    StarGot: 0
+    isLock: 1
+  - stageindex: 898
+    StarGot: 0
+    isLock: 1
+  - stageindex: 899
+    StarGot: 0
+    isLock: 1
+  - stageindex: 900
+    StarGot: 0
+    isLock: 0
+  - stageindex: 901
+    StarGot: 0
+    isLock: 1
+  - stageindex: 902
+    StarGot: 0
+    isLock: 1
+  - stageindex: 903
+    StarGot: 0
+    isLock: 1
+  - stageindex: 904
+    StarGot: 0
+    isLock: 1
+  - stageindex: 905
+    StarGot: 0
+    isLock: 0
+  - stageindex: 906
+    StarGot: 0
+    isLock: 1
+  - stageindex: 907
+    StarGot: 0
+    isLock: 1
+  - stageindex: 908
+    StarGot: 0
+    isLock: 1
+  - stageindex: 909
+    StarGot: 0
+    isLock: 1
+  - stageindex: 910
+    StarGot: 0
+    isLock: 0
+  - stageindex: 911
+    StarGot: 0
+    isLock: 1
+  - stageindex: 912
+    StarGot: 0
+    isLock: 1
+  - stageindex: 913
+    StarGot: 0
+    isLock: 1
+  - stageindex: 914
+    StarGot: 0
+    isLock: 1
+  - stageindex: 915
+    StarGot: 0
+    isLock: 0
+  - stageindex: 916
+    StarGot: 0
+    isLock: 1
+  - stageindex: 917
+    StarGot: 0
+    isLock: 1
+  - stageindex: 918
+    StarGot: 0
+    isLock: 1
+  - stageindex: 919
+    StarGot: 0
+    isLock: 1
+  - stageindex: 920
+    StarGot: 0
+    isLock: 0
+  - stageindex: 921
+    StarGot: 0
+    isLock: 1
+  - stageindex: 922
+    StarGot: 0
+    isLock: 1
+  - stageindex: 923
+    StarGot: 0
+    isLock: 1
+  - stageindex: 924
+    StarGot: 0
+    isLock: 1
+  - stageindex: 925
+    StarGot: 0
+    isLock: 0
+  - stageindex: 926
+    StarGot: 0
+    isLock: 1
+  - stageindex: 927
+    StarGot: 0
+    isLock: 1
+  - stageindex: 928
+    StarGot: 0
+    isLock: 1
+  - stageindex: 929
+    StarGot: 0
+    isLock: 1
+  - stageindex: 930
+    StarGot: 0
+    isLock: 0
+  - stageindex: 931
+    StarGot: 0
+    isLock: 1
+  - stageindex: 932
+    StarGot: 0
+    isLock: 1
+  - stageindex: 933
+    StarGot: 0
+    isLock: 1
+  - stageindex: 934
+    StarGot: 0
+    isLock: 1
+  - stageindex: 935
+    StarGot: 0
+    isLock: 0
+  - stageindex: 936
+    StarGot: 0
+    isLock: 1
+  - stageindex: 937
+    StarGot: 0
+    isLock: 1
+  - stageindex: 938
+    StarGot: 0
+    isLock: 1
+  - stageindex: 939
+    StarGot: 0
+    isLock: 1
+  - stageindex: 940
+    StarGot: 0
+    isLock: 0
+  - stageindex: 941
+    StarGot: 0
+    isLock: 1
+  - stageindex: 942
+    StarGot: 0
+    isLock: 1
+  - stageindex: 943
+    StarGot: 0
+    isLock: 1
+  - stageindex: 944
+    StarGot: 0
+    isLock: 1
+  - stageindex: 945
+    StarGot: 0
+    isLock: 0
+  - stageindex: 946
+    StarGot: 0
+    isLock: 1
+  - stageindex: 947
+    StarGot: 0
+    isLock: 1
+  - stageindex: 948
+    StarGot: 0
+    isLock: 1
+  - stageindex: 949
+    StarGot: 0
+    isLock: 1
+  - stageindex: 950
+    StarGot: 0
+    isLock: 0
+  - stageindex: 951
+    StarGot: 0
+    isLock: 1
+  - stageindex: 952
+    StarGot: 0
+    isLock: 1
+  - stageindex: 953
+    StarGot: 0
+    isLock: 1
+  - stageindex: 954
+    StarGot: 0
+    isLock: 1
+  - stageindex: 955
+    StarGot: 0
+    isLock: 0
+  - stageindex: 956
+    StarGot: 0
+    isLock: 1
+  - stageindex: 957
+    StarGot: 0
+    isLock: 1
+  - stageindex: 958
+    StarGot: 0
+    isLock: 1
+  - stageindex: 959
+    StarGot: 0
+    isLock: 1
+  - stageindex: 960
+    StarGot: 0
+    isLock: 0
+  - stageindex: 961
+    StarGot: 0
+    isLock: 1
+  - stageindex: 962
+    StarGot: 0
+    isLock: 1
+  - stageindex: 963
+    StarGot: 0
+    isLock: 1
+  - stageindex: 964
+    StarGot: 0
+    isLock: 1
+  - stageindex: 965
+    StarGot: 0
+    isLock: 0
+  - stageindex: 966
+    StarGot: 0
+    isLock: 1
+  - stageindex: 967
+    StarGot: 0
+    isLock: 1
+  - stageindex: 968
+    StarGot: 0
+    isLock: 1
+  - stageindex: 969
+    StarGot: 0
+    isLock: 1
+  - stageindex: 970
+    StarGot: 0
+    isLock: 0
+  - stageindex: 971
+    StarGot: 0
+    isLock: 1
+  - stageindex: 972
+    StarGot: 0
+    isLock: 1
+  - stageindex: 973
+    StarGot: 0
+    isLock: 1
+  - stageindex: 974
+    StarGot: 0
+    isLock: 1
+  - stageindex: 975
+    StarGot: 0
+    isLock: 0
+  - stageindex: 976
+    StarGot: 0
+    isLock: 1
+  - stageindex: 977
+    StarGot: 0
+    isLock: 1
+  - stageindex: 978
+    StarGot: 0
+    isLock: 1
+  - stageindex: 979
+    StarGot: 0
+    isLock: 1
+  - stageindex: 980
+    StarGot: 0
+    isLock: 0
+  - stageindex: 981
+    StarGot: 0
+    isLock: 1
+  - stageindex: 982
+    StarGot: 0
+    isLock: 1
+  - stageindex: 983
+    StarGot: 0
+    isLock: 1
+  - stageindex: 984
+    StarGot: 0
+    isLock: 1
+  - stageindex: 985
+    StarGot: 0
+    isLock: 0
+  - stageindex: 986
+    StarGot: 0
+    isLock: 1
+  - stageindex: 987
+    StarGot: 0
+    isLock: 1
+  - stageindex: 988
+    StarGot: 0
+    isLock: 1
+  - stageindex: 989
+    StarGot: 0
+    isLock: 1
+  - stageindex: 990
+    StarGot: 0
+    isLock: 0
+  - stageindex: 991
+    StarGot: 0
+    isLock: 1
+  - stageindex: 992
+    StarGot: 0
+    isLock: 1
+  - stageindex: 993
+    StarGot: 0
+    isLock: 1
+  - stageindex: 994
+    StarGot: 0
+    isLock: 1
+  - stageindex: 995
+    StarGot: 0
+    isLock: 0
+  - stageindex: 996
+    StarGot: 0
+    isLock: 1
+  - stageindex: 997
+    StarGot: 0
+    isLock: 1
+  - stageindex: 998
+    StarGot: 0
+    isLock: 1

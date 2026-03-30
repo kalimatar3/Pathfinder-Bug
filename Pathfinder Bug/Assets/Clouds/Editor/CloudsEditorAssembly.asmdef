@@ -1,0 +1,26 @@
+{
+    "name": "CloudsEditorAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2fc9fe609aff4af4e9d4033d32fcae4a",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Sirenix.OdinInspector.Attributes.dll",
+        "Sirenix.OdinInspector.Editor.dll",
+        "Sirenix.Utilities.dll",
+        "Sirenix.Utilities.Editor.dll",
+        "DOTweenEditor.dll",
+        "DOTween.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
