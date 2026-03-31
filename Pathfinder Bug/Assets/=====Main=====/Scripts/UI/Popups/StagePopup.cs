@@ -1,39 +1,36 @@
+using System.Collections.Generic;
 using UnityEngine;
-using System.Collections.Generic; 
 using System.Linq;
 using UnityEngine.UI;
 using Clouds.SignalSystem; 
+using Clouds.Ultilities; // Required for GetOrAddComponent extension method
 
 public class StagePopup : BasePopup
 {
+    // --- Assign these references in the Unity Inspector ---
     [Header("Prefabs")]
     [SerializeField] protected StageUIElement stageUIElementPrefab;
     [SerializeField] protected GameObject lineHorPrefab; 
-    [SerializeField] protected GameObject lineVerPrefab; 
+    [SerializeField] protected GameObject lineVerPrefab;
     [Header("Components")]
     [SerializeField] protected ScrollRect stageScrollRect;
     [SerializeField] protected RectTransform contentRect; 
     [SerializeField] protected GridLayoutGroup gridLayoutGroup; 
     [SerializeField] protected RectTransform viewportRect; 
+    // --- Stage Data ---
     [Header("Data")]
     [SerializeField] private StageListAsset stageListAsset; 
-    [SerializeField] protected float lineHorOffset = 0f; // Y offset for horizontal line (from cell center)
-    [SerializeField] protected float lineVerOffset = 0f; // Y offset for vertical line (from the middle of the gap between 2 rows)
+    [SerializeField] protected float lineHorOffset = 0f; 
+    [SerializeField] protected float lineVerOffset = 0f; 
     IStageDataControler stageDataControler; 
     [Header("Pooling Settings")]
+    protected IObjectPooler objectPooler;
     public int initialPoolSize = 64; 
     
     private List<StageData> allStageData; 
-    private Queue<StageUIElement> inactiveUIElementsPool;
     private Dictionary<int, StageUIElement> activeUIElements; 
-
-    // Pools and Dictionaries for lines
-    private Queue<RectTransform> inactiveHorLinesPool;
-    private Dictionary<int, RectTransform> activeHorLines; // Key: row index
-    private Queue<RectTransform> inactiveVerLinesPool;
-    private Dictionary<int, RectTransform> activeVerLines; // Key: row index (the row from which the vertical line STARTS)
-
-    // Layout parameters will be read from GridLayoutGroup and then used manually
+    private Dictionary<int, RectTransform> activeHorLines; 
+    private Dictionary<int, RectTransform> activeVerLines; 
     private float cellWidth; 
     private float cellHeight;  
     private float spacingX;
@@ -53,16 +50,18 @@ public class StagePopup : BasePopup
 
     protected override void Awake()
     {
+        stageDataControler = DataManager.Instance;
+        allStageData = stageDataControler.stageDynamicData.stageDatas;
         base.Awake();
     }
     protected void Start()
     {
-        stageDataControler = DataManager.Instance;
-        allStageData = stageDataControler.stageDynamicData.stageDatas;
+        objectPooler = ObjectPooler.Instance;
         SetupLayoutMetrics();
-        InitializePool();
-        UpdateVisibleStages();     
+        InitializeObjectPoolerPools();
+        UpdateVisibleStages();       
     }
+
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -89,7 +88,7 @@ public class StagePopup : BasePopup
         numberOfColumns = 4; 
         if (numberOfColumns == 0) numberOfColumns = 1; 
 
-        gridLayoutGroup.enabled = false; // Disable GridLayoutGroup component at runtime
+        gridLayoutGroup.enabled = false; 
 
         // Calculate total actual number of rows for all stages
         totalRowsInAllStages = Mathf.CeilToInt((float)allStageData.Count / numberOfColumns);
@@ -108,41 +107,14 @@ public class StagePopup : BasePopup
         visibleRows = Mathf.CeilToInt(viewportRect.rect.height / (cellHeight + spacingY)) + 2; 
     }
 
-    void InitializePool()
+    void InitializeObjectPoolerPools()
     {
-        inactiveUIElementsPool = new Queue<StageUIElement>();
         activeUIElements = new Dictionary<int, StageUIElement>();
-
-        inactiveHorLinesPool = new Queue<RectTransform>();
         activeHorLines = new Dictionary<int, RectTransform>();
-        inactiveVerLinesPool = new Queue<RectTransform>();
         activeVerLines = new Dictionary<int, RectTransform>();
-
-        // Pool Horizontal Lines (spawn first to be rendered underneath)
-        for (int i = 0; i < visibleRows + 2; i++) 
-        {
-            GameObject lineObj = Instantiate(lineHorPrefab, contentRect.transform); // Child of contentRect
-            lineObj.SetActive(false);
-            inactiveHorLinesPool.Enqueue(lineObj.GetComponent<RectTransform>());
-        }
-
-        // Pool Vertical Lines (spawn first to be rendered underneath)
-        for (int i = 0; i < visibleRows + 2; i++) 
-        {
-            GameObject lineObj = Instantiate(lineVerPrefab, contentRect.transform); // Child of contentRect
-            lineObj.SetActive(false);
-            inactiveVerLinesPool.Enqueue(lineObj.GetComponent<RectTransform>());
-        }
-
-        // Pool StageUIElements (spawn last to be rendered on top)
-        for (int i = 0; i < initialPoolSize; i++)
-        {
-            GameObject uiObj = Instantiate(stageUIElementPrefab.gameObject, contentRect.transform);
-            StageUIElement uiElement = uiObj.GetComponent<StageUIElement>();
-            uiElement.gameObject.SetActive(false); 
-            uiElement.ResetUI(); 
-            inactiveUIElementsPool.Enqueue(uiElement);
-        }
+        objectPooler.CreatePool(stageUIElementPrefab.gameObject, initialPoolSize);
+        objectPooler.CreatePool(lineHorPrefab, visibleRows + 2);
+        objectPooler.CreatePool(lineVerPrefab, visibleRows + 2);
     }
 
     void OnScroll(Vector2 normalizedPosition)
@@ -150,6 +122,10 @@ public class StagePopup : BasePopup
         UpdateVisibleStages();
     }
 
+    /// <summary>
+    /// Updates which stage UI elements are visible based on scroll position,
+    /// pooling out hidden elements and pooling in newly visible ones.
+    /// </summary>
     void UpdateVisibleStages()
     {
         float currentScrollY = contentRect.anchoredPosition.y;
@@ -158,6 +134,7 @@ public class StagePopup : BasePopup
         
         int newFirstVisibleRow = Mathf.FloorToInt(offsetFromContentBottom / (cellHeight + spacingY));
         
+        // Add a buffer row for smooth scrolling
         newFirstVisibleRow = Mathf.Max(0, newFirstVisibleRow - 1); 
 
         int newLastVisibleRow = Mathf.Min(
@@ -165,6 +142,7 @@ public class StagePopup : BasePopup
             newFirstVisibleRow + visibleRows 
         );
 
+        // If visible rows haven't changed, do nothing
         if (newFirstVisibleRow == currentFirstVisibleRow && newLastVisibleRow == currentLastVisibleRow)
         {
             return;
@@ -175,53 +153,46 @@ public class StagePopup : BasePopup
 
         int newFirstVisibleStageIndex = currentFirstVisibleRow * numberOfColumns;
         int newLastVisibleStageIndex = (currentLastVisibleRow + 1) * numberOfColumns - 1;         
-        // --- REMOVE & POOL OUT elements not in view ---
 
-        // StageUIElements
-        var activeStageIndexes = activeUIElements.Keys.ToList(); 
-        foreach (int stageIndex in activeStageIndexes)
+        // Create a temporary list to avoid modifying dictionary while iterating its keys
+        List<int> activeStageIndexesToRemove = activeUIElements.Keys.ToList(); 
+        foreach (int stageIndex in activeStageIndexesToRemove)
         {
             int row = stageIndex / numberOfColumns;
             if (row < newFirstVisibleRow || row > newLastVisibleRow)
             {
                 StageUIElement uiElement = activeUIElements[stageIndex];
-                uiElement.gameObject.SetActive(false);
-                uiElement.ResetUI();
-                inactiveUIElementsPool.Enqueue(uiElement);
+                objectPooler.ReturnPooledObject(uiElement.gameObject); // Return to central pooler
                 activeUIElements.Remove(stageIndex);
             }
         }
 
         // Horizontal Lines
-        var activeHorLineRows = activeHorLines.Keys.ToList();
-        foreach (int row in activeHorLineRows)
+        List<int> activeHorLineRowsToRemove = activeHorLines.Keys.ToList();
+        foreach (int row in activeHorLineRowsToRemove)
         {
             if (row < newFirstVisibleRow || row > newLastVisibleRow)
             {
                 RectTransform line = activeHorLines[row];
-                line.gameObject.SetActive(false);
-                inactiveHorLinesPool.Enqueue(line);
+                objectPooler.ReturnPooledObject(line.gameObject); // Return to central pooler
                 activeHorLines.Remove(row);
             }
         }
 
         // Vertical Lines
-        var activeVerLineRows = activeVerLines.Keys.ToList();
-        foreach (int row in activeVerLineRows)
+        List<int> activeVerLineRowsToRemove = activeVerLines.Keys.ToList();
+        foreach (int row in activeVerLineRowsToRemove)
         {
+            // Note: Vertical lines are typically between rows, so newLastVisibleRow might need careful adjustment
             if (row < newFirstVisibleRow || row >= newLastVisibleRow) 
             {
                 RectTransform line = activeVerLines[row];
-                line.gameObject.SetActive(false);
-                inactiveVerLinesPool.Enqueue(line);
+                objectPooler.ReturnPooledObject(line.gameObject); // Return to central pooler
                 activeVerLines.Remove(row);
             }
         }
 
 
-        // --- ADD & POOL IN elements that are now in view ---
-
-        // Horizontal Lines (Add first to be rendered underneath stages)
         for (int row = newFirstVisibleRow; row <= newLastVisibleRow; row++)
         {
             if (row < 0 || row >= totalRowsInAllStages) continue;
@@ -240,15 +211,14 @@ public class StagePopup : BasePopup
             float horLinePosX = paddingLeft + horLineWidth / 2f; 
 
             horLineRect.anchoredPosition = new Vector2(horLinePosX, horLinePosY);
-            // Line height taken from prefab, width calculated
             horLineRect.sizeDelta = new Vector2(horLineWidth, lineHorPrefab.GetComponent<RectTransform>().sizeDelta.y);
             horLineRect.gameObject.SetActive(true);
-            horLineRect.SetAsFirstSibling(); 
+            horLineRect.SetAsFirstSibling(); // Ensure lines are rendered behind stages
             activeHorLines.Add(row, horLineRect);
         }
 
         // Vertical Lines (Add next to be rendered underneath stages)
-        for (int row = newFirstVisibleRow; row < newLastVisibleRow; row++) 
+        for (int row = newFirstVisibleRow; row < newLastVisibleRow; row++) // Loop up to newLastVisibleRow - 1 because lines are between rows
         {
             if (row < 0 || row >= totalRowsInAllStages - 1) continue; 
             if (activeVerLines.ContainsKey(row)) continue;
@@ -261,7 +231,7 @@ public class StagePopup : BasePopup
             verLineRect.pivot = new Vector2(0.5f, 0.5f); 
 
             float verLinePosX;
-            if (row % 2 == 0) 
+            if (row % 2 == 0) // Snake pattern for vertical lines based on row parity
             {
                 verLinePosX = paddingLeft + (numberOfColumns - 1) * (cellWidth + spacingX) + cellWidth / 2f;
             }
@@ -270,18 +240,16 @@ public class StagePopup : BasePopup
                 verLinePosX = paddingLeft + cellWidth / 2f;
             }
 
-            // Recalculate Y Position to match line height from prefab
             float verLineMidY = paddingBottom + (row + 1) * (cellHeight + spacingY) - spacingY / 2f;
             float verLinePosY = verLineMidY + lineVerOffset;
             
             verLineRect.anchoredPosition = new Vector2(verLinePosX, verLinePosY);
-            // sizeDelta line removed to maintain prefab size
+            float verLineHeight = cellHeight + spacingY; 
+            verLineRect.sizeDelta = new Vector2(lineVerPrefab.GetComponent<RectTransform>().sizeDelta.x, verLineHeight);
             verLineRect.gameObject.SetActive(true);
-            verLineRect.SetAsFirstSibling(); 
+            verLineRect.SetAsFirstSibling(); // Ensure lines are rendered behind stages
             activeVerLines.Add(row, verLineRect);
         }
-
-        // StageUIElements (Snake pattern positioning) (Add last to be rendered on top)
         for (int i = newFirstVisibleStageIndex; i <= newLastVisibleStageIndex; i++)
         {
             if (i < 0 || i >= allStageData.Count) continue; 
@@ -291,12 +259,8 @@ public class StagePopup : BasePopup
             uiElement.transform.SetParent(contentRect.transform); 
             uiElement.transform.localScale = Vector3.one; 
             RectTransform elementRect = uiElement.GetComponent<RectTransform>();
-
-            // Keep AnchorMin and AnchorMax as is
             elementRect.anchorMin = new Vector2(0f, 0f); 
             elementRect.anchorMax = new Vector2(0f, 0f); 
-            
-            // Change Pivot to center (0.5, 0.5)
             elementRect.pivot = new Vector2(0.5f, 0.5f); 
             
             int row = i / numberOfColumns;
@@ -329,51 +293,60 @@ public class StagePopup : BasePopup
 
     StageUIElement GetOrCreateUIElement()
     {
-        if (inactiveUIElementsPool.Count > 0)
-        {
-            return inactiveUIElementsPool.Dequeue();
-        }
-        else
-        {
-            GameObject uiObj = Instantiate(stageUIElementPrefab.gameObject, contentRect.transform);
-            StageUIElement uiElement = uiObj.GetComponent<StageUIElement>();
-            return uiElement;
-        }
+        GameObject obj = objectPooler.GetPooledObject(stageUIElementPrefab.gameObject, Vector3.zero, Quaternion.identity, contentRect.transform);
+        StageUIElement uiElement = obj.GetComponent<StageUIElement>();
+
+        // Assign original prefab for tracking when returning to pool
+        PooledObjectInfo info = obj.GetOrAddComponent<PooledObjectInfo>(); // Use GetOrAddComponent from Clouds.Ultilities
+        info.originalPrefab = stageUIElementPrefab.gameObject;
+
+        return uiElement;
     }
 
     RectTransform GetOrCreateHorizontalLine()
     {
-        if (inactiveHorLinesPool.Count > 0)
-        {
-            return inactiveHorLinesPool.Dequeue();
-        }
-        else
-        {
-            Debug.LogWarning("Pool ran out of Horizontal Line elements. Consider increasing initial pool size.");
-            GameObject lineObj = Instantiate(lineHorPrefab, contentRect.transform); // Parent is contentRect
-            return lineObj.GetComponent<RectTransform>();
-        }
+        GameObject obj = objectPooler.GetPooledObject(lineHorPrefab, Vector3.zero, Quaternion.identity, contentRect.transform);
+        RectTransform lineRect = obj.GetComponent<RectTransform>();
+
+        // Assign original prefab for tracking when returning to pool
+        PooledObjectInfo info = obj.GetOrAddComponent<PooledObjectInfo>();
+        info.originalPrefab = lineHorPrefab;
+
+        return lineRect;
     }
 
     RectTransform GetOrCreateVerticalLine()
     {
-        if (inactiveVerLinesPool.Count > 0)
-        {
-            return inactiveVerLinesPool.Dequeue();
-        }
-        else
-        {
-            Debug.LogWarning("Pool ran out of Vertical Line elements. Consider increasing initial pool size.");
-            GameObject lineObj = Instantiate(lineVerPrefab, contentRect.transform); // Parent is contentRect
-            return lineObj.GetComponent<RectTransform>();
-        }
+        GameObject obj = objectPooler.GetPooledObject(lineVerPrefab, Vector3.zero, Quaternion.identity, contentRect.transform);
+        RectTransform lineRect = obj.GetComponent<RectTransform>();
+
+        // Assign original prefab for tracking when returning to pool
+        PooledObjectInfo info = obj.GetOrAddComponent<PooledObjectInfo>();
+        info.originalPrefab = lineVerPrefab;
+
+        return lineRect;
     }
+
     void ResetStageUI ()
     {
-        stageDataControler.stageDynamicData.stageDatas = stageDataControler.RandomStageData();
+        int stage_unlocked = Random.Range(0, allStageData.Count);
+
+        for (int i = 0; i < allStageData.Count; i++)
+        {
+            if (i < stage_unlocked)
+            {
+                allStageData[i].isLock = false;
+                allStageData[i].StarGot = Random.Range(1, 4); // Random.Range(min, max) is exclusive for int max
+            }
+            else
+            {
+                allStageData[i].isLock = true;
+                allStageData[i].StarGot = 0;
+            }
+        }
+        stageDataControler.stageDynamicData.stageDatas = allStageData;
         stageDataControler.SaveData();
-        
-        allStageData = stageDataControler.stageDynamicData.stageDatas;
+
         // Update currently active UI elements to reflect new data
         foreach (var entry in activeUIElements)
         {
@@ -386,6 +359,11 @@ public class StagePopup : BasePopup
         }
         UpdateVisibleStages();
     }
+    
+    /// <summary>
+    /// Handles virtual updates from the SignalSystem.
+    /// </summary>
+    /// <param name="message">The SignalMessage received.</param>
     public override void UpdateVirtual(SignalMessage message)
     {
         base.UpdateVirtual(message);

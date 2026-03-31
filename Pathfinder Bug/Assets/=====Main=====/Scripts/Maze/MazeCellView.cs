@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 public class MazeCellView : MonoBehaviour
 {
-    // Assign these GameObjects in the Inspector from your prefab's children
     public GameObject topWall;
     public GameObject rightWall;
     public GameObject bottomWall;

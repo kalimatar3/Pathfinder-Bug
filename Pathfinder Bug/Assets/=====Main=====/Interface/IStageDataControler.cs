@@ -5,6 +5,6 @@ public interface IStageDataControler
 {
     public StageDynamicData stageDynamicData {get; set;}
     public bool ISLAODCOMPLETE {get;}
-    public void SaveData();
+    void SaveData();
     List<StageData> RandomStageData();
 }

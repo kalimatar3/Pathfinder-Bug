@@ -25,12 +25,8 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         IMazeData mazeData = Maze.GetComponent<IMazeData>();
         mazeData.MazeSize = new Vector2(mazeWidth,mazeHeight);
         grid = new Cell[mazeWidth, mazeHeight];
-        InitializeGrid(); // Initialize grid and set WorldPositions
-
-        // Define Start and End Cells (for primary path and later placement) ---
+        InitializeGrid(); 
         Maze.startCell = grid[0, mazeHeight - 1]; 
-
-        // Target End Cell (Random, exclude start cell)
         do
         {
             int randomX = Random.Range(0, mazeWidth);
@@ -96,7 +92,7 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
 
         pathStack.Push(start);
         pathVisited.Add(start);
-        start.Visited = true; // Mark as visited for later overall maze generation
+        start.Visited = true; 
 
         Cell current = start;
 
@@ -267,7 +263,6 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
             {
                 Cell cellData = grid[x, y]; 
 
-                // Use WorldPosition for instantiation
                 GameObject mazeCellGO = Instantiate(cellPrefab, maze.GetTranform().position + new Vector3(x,y), Quaternion.identity, maze.GetTranform());
                 mazeCellGO.name = $"Cell_{x}_{y}";
 
@@ -289,7 +284,6 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         // Instantiate the Target prefab
         if (targetPrefab != null)
         {
-            // Use WorldPosition for instantiation
             GameObject GateGO = Instantiate(targetPrefab, maze.GetTranform().position + new Vector3(maze.endCell.X + .5f,maze.endCell.Y + .5f) + Vector3.forward * creatureZOffset, Quaternion.identity, maze.GetTranform());
             return GateGO.GetComponent<Gate>();
         }
@@ -301,10 +295,8 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
     }
     protected Bug InstantiateBug(IMazeData maze)
     {
-        // Instantiate the Bug prefab
         if (bugPrefab != null)
         {
-            // Use WorldPosition for instantiation
             GameObject BugGO = Instantiate(bugPrefab, maze.GetTranform().position + new Vector3(maze.startCell.X + .5f,maze.startCell.Y + .5f) + Vector3.forward * creatureZOffset, Quaternion.identity, maze.GetTranform());
             return BugGO.GetComponent<Bug>();
         }

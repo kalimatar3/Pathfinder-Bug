@@ -131,10 +131,7 @@ public class GamePlayManager : Singleton<GamePlayManager>,IGamePlayController
 
         // Get world position of Gate
         Vector3 gateWorldPosition = Gate.transform.position;
-
         Vector2 screenPoint = cameraHolder.Camera.WorldToScreenPoint(gateWorldPosition);
-
-        // Convert screen coordinates to local coordinates within the background's RectTransform
         Vector2 localPoint;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(backgroundRect, screenPoint, cameraHolder.Camera, out localPoint))
         {
@@ -145,8 +142,6 @@ public class GamePlayManager : Singleton<GamePlayManager>,IGamePlayController
             float uvY = (localPoint.y + backgroundRect.rect.height / 2) / backgroundRect.rect.height;
 
             Vector2 revealCenterUV = new Vector2(uvX, uvY);
-
-            // Set _RevealCenter for the shader material
             backgroundMaterial.SetVector("_RevealCenter", new Vector4(revealCenterUV.x, revealCenterUV.y, 0, 0));
         }
     }

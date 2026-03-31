@@ -10,8 +10,9 @@ public class DataManager : Singleton<DataManager>,IStageDataControler
     [SerializeField] protected StageListAsset stageListAsset;
     public bool ISLAODCOMPLETE => isStageDataLoadCompleted;
     StageDynamicData IStageDataControler.stageDynamicData { get => _stageDynamicData; set => _stageDynamicData = value; }
-
+    void IStageDataControler.SaveData() => SaveStageData();
     List<StageData> IStageDataControler.RandomStageData() => RandomStageData();
+    
     public override void Awake()
     {
         base.Awake();
@@ -41,9 +42,10 @@ public class DataManager : Singleton<DataManager>,IStageDataControler
     protected async void LoadData()
     {
         while(!LSManager.LoadDataFromPlayerPref(Config.STAGEDATA,new StageDynamicData(RandomStageData()),out _stageDynamicData)) await UniTask.DelayFrame(1);
+        this.SaveStageData();
         isStageDataLoadCompleted = true;
     }
-    public void SaveData()
+    public void SaveStageData()
     {
         LSManager.SaveDataToPlayerPref(Config.STAGEDATA,_stageDynamicData);
     }

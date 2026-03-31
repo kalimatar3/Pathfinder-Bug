@@ -3,19 +3,29 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class StageUIElement : BaseButton
+public class StageUIElement : BaseButton, IPoolable 
 {
     [HideInInspector] 
-    public int stageIndex;
-
-    [SerializeField] protected List<GameObject> Stars; 
+    public int stageIndex; 
+    [SerializeField] protected List<GameObject> Stars;
     [SerializeField] protected TextMeshProUGUI StageName_Text;
-    [SerializeField] protected GameObject Lock;
+    [SerializeField] protected GameObject Lock; 
     [SerializeField] protected GameObject Tut;
-    IMenuController menuController;
+    protected IMenuController menuController;
+    public GameObject GameObject => this.gameObject;
     protected void Start()
     {
         menuController = MenuManager.Instance;
+    }
+    public void OnGetFromPool()
+    {
+        ResetUI(); 
+        gameObject.SetActive(true); // Ensure the GameObject is active when taken from pool
+    }
+
+    public void OnReturnToPool()
+    {
+        gameObject.SetActive(false); 
     }
     public void Init(StageData data)
     {
@@ -45,7 +55,6 @@ public class StageUIElement : BaseButton
         }
     }
 
-    // Method to set the display state of stars
     protected void SetStars(int stargots)
     {
         for(int i = 0; i < Stars.Count;i++)
@@ -57,8 +66,7 @@ public class StageUIElement : BaseButton
         }
     }
 
-    // ResetUI method to revert the UI element to its initial state when reused from the pool
-    public void ResetUI()
+    public void ResetUI() 
     {
         if (StageName_Text != null) StageName_Text.text = string.Empty;
         if (Lock != null) Lock.gameObject.SetActive(false);
@@ -72,6 +80,6 @@ public class StageUIElement : BaseButton
     protected override void OnButtonClicked()
     {
         base.OnButtonClicked();
-        menuController.Play();
+       menuController.Play();
     }
 }

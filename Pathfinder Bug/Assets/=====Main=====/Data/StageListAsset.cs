@@ -1,17 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 [CreateAssetMenu(fileName = "StageList", menuName = "Game Data/Stage List")]
 public class StageListAsset : ScriptableObject
 {
     [SerializeField]
     private List<StageData> allStages = new List<StageData>();
-
     public List<StageData> AllStages => allStages;
-
-    // Function to initialize 999 dummy stage data (Editor-only)
-    // You can right-click the StageList asset in the Project view and select "Generate 999 Dummy Stages"
-    [ContextMenu("Generate 999 Dummy Stages")] 
+    [Button(ButtonSizes.Large)]
     void GenerateDummyStages()
     {
         allStages.Clear();

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Maze : MonoBehaviour,IMazeData
 {
-    private Cell[,] grid; // CHANGED: now grid[x, y] for (x,y) access pattern
+    private Cell[,] grid;
     [SerializeField] private List<Cell> _path; 
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private Cell _startcell;
