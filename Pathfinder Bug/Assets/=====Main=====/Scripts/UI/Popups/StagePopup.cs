@@ -329,20 +329,10 @@ public class StagePopup : BasePopup
 
     void ResetStageUI ()
     {
-        int stage_unlocked = Random.Range(0, allStageData.Count);
-
-        for (int i = 0; i < allStageData.Count; i++)
+        allStageData = new List<StageData>();
+        for(int i = 0; i < stageDataControler.stageDynamicData.stageDatas.Count;i++)
         {
-            if (i < stage_unlocked)
-            {
-                allStageData[i].isLock = false;
-                allStageData[i].StarGot = Random.Range(1, 4); // Random.Range(min, max) is exclusive for int max
-            }
-            else
-            {
-                allStageData[i].isLock = true;
-                allStageData[i].StarGot = 0;
-            }
+            allStageData.Add(new StageData(i));
         }
         stageDataControler.stageDynamicData.stageDatas = allStageData;
         stageDataControler.SaveData();
