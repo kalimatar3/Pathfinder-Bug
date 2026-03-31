@@ -586,7 +586,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4364034832326165938, guid: 3b0bc53c603a7c642abe1285f69397e4, type: 3}
+  m_Sprite: {fileID: 526291661, guid: 09583ac1ff94cf446a1f08fb7d8d663e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6231044458718751821, guid: 42818801e2f73d143846395f6941767b, type: 3}
+  m_Sprite: {fileID: -2000449856, guid: 09583ac1ff94cf446a1f08fb7d8d663e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b79e0e55457db64c98a64351d553fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CloudsAssembly::UniqueIDComponent
-  uniqueID: 55896
+  uniqueID: 68434
   lastInstanceID: 0
 --- !u!114 &398932792
 MonoBehaviour:
@@ -817,7 +817,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 6343661304034035732, guid: fbf57edeb618adf4880e31299e149e13, type: 3}
+  m_Sprite: {fileID: -1674870145, guid: 09583ac1ff94cf446a1f08fb7d8d663e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b79e0e55457db64c98a64351d553fd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CloudsAssembly::UniqueIDComponent
-  uniqueID: 55944
+  uniqueID: 68482
   lastInstanceID: 0
 --- !u!1 &1085184828
 GameObject:
@@ -1567,8 +1567,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6915578995126921128, guid: 2d854ade05140d54ebdb0c57cf8b592f, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 719443010, guid: 09583ac1ff94cf446a1f08fb7d8d663e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1625,5 +1625,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 909144241}
   - {fileID: 181454731}
+  - {fileID: 909144241}

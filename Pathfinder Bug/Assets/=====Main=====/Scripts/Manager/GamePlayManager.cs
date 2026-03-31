@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI; // Required for Image and RectTransformUtility
+using UnityEngine.UI; 
 
 public class GamePlayManager : Singleton<GamePlayManager>,IGamePlayController
 {
@@ -78,19 +78,40 @@ public class GamePlayManager : Singleton<GamePlayManager>,IGamePlayController
         await SceneManager.LoadSceneAsync("Play");
         backGroundUIData.AppearAnimaiton.Restart();
     }
-    protected void PlaceMaze()
+    protected void PlaceMaze() // Place the Maze
     {
-        Maze.gameObject.SetActive(true);
-        Vector3[] corners = new Vector3[4];
-        gamePlayUIData.MazeField.GetWorldCorners(corners);
-        float width = Vector3.Distance(corners[0], corners[3]);
-        float height = Vector3.Distance(corners[0], corners[1]);
-        float ratio = Mathf.Min(width / mazeData.MazeSize.x, height / mazeData.MazeSize.y);
-        Maze.transform.localScale = Vector3.one * ratio;
-        Vector3 center = (corners[0] + corners[2]) * 0.5f;
-        Maze.transform.localPosition = center - new Vector3(mazeData.MazeSize.x / 2, mazeData.MazeSize.y / 2) * ratio;
-    }
+        // Activate the Maze GameObject so it becomes visible.
+        Maze.gameObject.SetActive(true); 
 
+        Vector3[] corners = new Vector3[4];
+        // Get the world space coordinates of the four corners of the MazeField UI element.
+        // corners[0] = bottom-left, corners[1] = top-left, corners[2] = top-right, corners[3] = bottom-right
+        gamePlayUIData.MazeField.GetWorldCorners(corners);
+
+        // Calculate the width of the MazeField in world space.
+        float width = Vector3.Distance(corners[0], corners[3]);
+        // Calculate the height of the MazeField in world space.
+        float height = Vector3.Distance(corners[0], corners[1]);
+
+        // Determine the scaling ratio needed to fit the maze within the MazeField.
+        // We take the minimum of (field_width / maze_width) and (field_height / maze_height)
+        // to ensure the maze fits entirely without distortion, scaling down if necessary.
+        float ratio = Mathf.Min(width / mazeData.MazeSize.x, height / mazeData.MazeSize.y);
+
+        // Apply the calculated scale to the Maze's transform.
+        // This scales the entire maze (including cells, bug, gate) to fit the UI field.
+        Maze.transform.localScale = Vector3.one * ratio;
+
+        // Calculate the center point of the MazeField in world space.
+        Vector3 center = (corners[0] + corners[2]) * 0.5f;
+
+        // Position the Maze.
+        // The Maze's local origin (0,0) is assumed to be its bottom-left corner after instantiation.
+        // We want to align this bottom-left corner with the calculated bottom-left of the scaled MazeField.
+        // Therefore, we take the center of the MazeField and subtract half of the scaled maze's dimensions
+        // to effectively move the maze's (0,0) to the bottom-left of the MazeField.
+        Maze.transform.localPosition = center - new Vector3(mazeData.MazeSize.x / 2, mazeData.MazeSize.y / 2) * ratio;
+    }    
     protected void SetPivotRevealBackGroundCenter()
     {
         if (Gate == null || backGroundUIData == null || backGroundUIData.BackGroundImage == null || backgroundMaterial == null)

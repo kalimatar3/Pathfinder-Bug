@@ -1,4 +1,3 @@
-// File: Assets/Scripts/Maze/Cell.cs
 using UnityEngine;
 using System.Collections.Generic;
 [System.Serializable]

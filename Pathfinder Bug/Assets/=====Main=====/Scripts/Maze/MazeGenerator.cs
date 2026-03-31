@@ -1,4 +1,3 @@
-// File: Assets/Scripts/Maze/MazeGenerator.cs
 using UnityEngine;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -12,7 +11,7 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
     [SerializeField] protected GameObject bugPrefab;    
     [SerializeField] protected GameObject targetPrefab; 
     [SerializeField] protected Maze MazePrefab;
-    private Cell[,] grid; // CHANGED: now grid[x, y] for (x,y) access pattern
+    private Cell[,] grid; 
     public float creatureZOffset = -0.1f; 
 
     Maze IMazeGenerator.GenerateMaze() => GenerateMaze();
@@ -26,7 +25,7 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         IMazeData mazeData = Maze.GetComponent<IMazeData>();
         mazeData.MazeSize = new Vector2(mazeWidth,mazeHeight);
         grid = new Cell[mazeWidth, mazeHeight];
-        InitializeGrid();
+        InitializeGrid(); // Initialize grid and set WorldPositions
 
         // Define Start and End Cells (for primary path and later placement) ---
         Maze.startCell = grid[0, mazeHeight - 1]; 
@@ -36,7 +35,7 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         {
             int randomX = Random.Range(0, mazeWidth);
             int randomY = Random.Range(0, mazeHeight);
-            Maze.endCell = grid[randomX, randomY]; // CORRECTED: (x,y) access
+            Maze.endCell = grid[randomX, randomY]; 
         } while ( Maze.endCell == Maze.startCell);
 
         // Generate the guaranteed primary path ---
@@ -48,13 +47,27 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         }
 
         // Fill in the rest of the maze using Recursive Backtracker (DFS)
+        // This loop now ensures all parts of the maze are connected
         for (int y = 0; y < mazeHeight; y++) 
         {
             for(int x = 0; x < mazeWidth;x++)
             {
-                // Only run RecursiveBacktracker on cells not visited by the primary path
                 if (!grid[x, y].Visited)
                 {
+                    // If a cell hasn't been visited, it means it's part of an isolated region.
+                    // Try to connect it to an already visited part of the maze.
+                    List<Cell> visitedNeighbors = GetNeighbors(grid[x,y]).Where(n => n.Visited).ToList();
+                    if(visitedNeighbors.Count > 0)
+                    {
+                        // Choose a random visited neighbor and break a wall to connect
+                        Cell connectionNeighbor = visitedNeighbors[Random.Range(0, visitedNeighbors.Count)];
+                        RemoveWallsBetween(grid[x,y], connectionNeighbor);
+                        grid[x,y].Visited = true; // Mark as visited to ensure RecursiveBacktracker starts from a connected point
+                    }
+
+                    // Now run RecursiveBacktracker on this cell.
+                    // If it was just connected, it will expand from there.
+                    // If it's still isolated (e.g., first cell of a new region), it will start a new branch.
                     RecursiveBacktracker(grid[x, y]); 
                 }              
             }
@@ -160,14 +173,12 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
                 // If there are unvisited neighbors, choose one randomly
                 int randomIndex = Random.Range(0, unvisitedNeighbors.Count);
                 Cell chosenNeighbor = unvisitedNeighbors[randomIndex];
-                
                 RemoveWallsBetween(currentCell, chosenNeighbor); // Remove the wall between current and chosen
                 chosenNeighbor.Visited = true; // Mark the chosen neighbor as visited
                 stack.Push(chosenNeighbor); // Push the chosen neighbor onto the stack
             }
             else
             {
-                // If there are no unvisited neighbors, pop the current cell to backtrack
                 stack.Pop();
             }
         }
@@ -256,7 +267,8 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
             {
                 Cell cellData = grid[x, y]; 
 
-                GameObject mazeCellGO = Instantiate(cellPrefab,maze.GetTranform().position + new Vector3(x * 1f, y * 1f, 0), Quaternion.identity,maze.GetTranform());
+                // Use WorldPosition for instantiation
+                GameObject mazeCellGO = Instantiate(cellPrefab, maze.GetTranform().position + new Vector3(x,y), Quaternion.identity, maze.GetTranform());
                 mazeCellGO.name = $"Cell_{x}_{y}";
 
                 MazeCellView cellView = mazeCellGO.GetComponent<MazeCellView>();
@@ -270,7 +282,6 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
                 }
             }
         }
-        Debug.Log($"Maze of size {mazeWidth}x{mazeHeight} instantiated successfully.");
     }
 
     protected Gate InstantiateGate(IMazeData maze)
@@ -278,8 +289,8 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         // Instantiate the Target prefab
         if (targetPrefab != null)
         {
-            // Adjust Z-coordinate slightly if target has height, to place it on top of the cell
-            GameObject GateGO = Instantiate(targetPrefab,maze.GetTranform().position + new Vector3(maze.endCell.X + 0.5f, maze.endCell.Y + 0.5f, creatureZOffset), Quaternion.identity,maze.GetTranform());
+            // Use WorldPosition for instantiation
+            GameObject GateGO = Instantiate(targetPrefab, maze.GetTranform().position + new Vector3(maze.endCell.X + .5f,maze.endCell.Y + .5f) + Vector3.forward * creatureZOffset, Quaternion.identity, maze.GetTranform());
             return GateGO.GetComponent<Gate>();
         }
         else
@@ -293,8 +304,8 @@ public class MazeGenerator : MonoBehaviour, IMazeGenerator
         // Instantiate the Bug prefab
         if (bugPrefab != null)
         {
-            // Adjust Z-coordinate slightly if bug has height, to place it on top of the cell
-            GameObject BugGO = Instantiate(bugPrefab,maze.GetTranform().position + new Vector3(maze.startCell.X + 0.5f, maze.startCell.Y + 0.5f, creatureZOffset), Quaternion.identity,maze.GetTranform());
+            // Use WorldPosition for instantiation
+            GameObject BugGO = Instantiate(bugPrefab, maze.GetTranform().position + new Vector3(maze.startCell.X + .5f,maze.startCell.Y + .5f) + Vector3.forward * creatureZOffset, Quaternion.identity, maze.GetTranform());
             return BugGO.GetComponent<Bug>();
         }
         else

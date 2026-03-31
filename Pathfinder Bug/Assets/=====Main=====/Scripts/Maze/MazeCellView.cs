@@ -1,4 +1,3 @@
-// File: Assets/Scripts/Maze/MazeCellView.cs
 using UnityEngine;
 using System.Collections.Generic;
 
