@@ -54,13 +54,15 @@ public class StagePopup : BasePopup
     protected override void Awake()
     {
         base.Awake();
+    }
+    protected void Start()
+    {
         stageDataControler = DataManager.Instance;
         allStageData = stageDataControler.stageDynamicData.stageDatas;
         SetupLayoutMetrics();
         InitializePool();
-        UpdateVisibleStages(); 
+        UpdateVisibleStages();     
     }
-
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -368,24 +370,10 @@ public class StagePopup : BasePopup
     }
     void ResetStageUI ()
     {
-        int stage_unlocked = Random.Range(0, allStageData.Count);
-
-        for (int i = 0; i < allStageData.Count; i++)
-        {
-            if (i < stage_unlocked)
-            {
-                allStageData[i].isLock = false;
-                allStageData[i].StarGot = Random.Range(1, 4); // Random.Range(min, max) is exclusive for int max
-            }
-            else
-            {
-                allStageData[i].isLock = true;
-                allStageData[i].StarGot = 0;
-            }
-        }
-        stageDataControler.stageDynamicData.stageDatas = allStageData;
+        stageDataControler.stageDynamicData.stageDatas = stageDataControler.RandomStageData();
         stageDataControler.SaveData();
-
+        
+        allStageData = stageDataControler.stageDynamicData.stageDatas;
         // Update currently active UI elements to reflect new data
         foreach (var entry in activeUIElements)
         {

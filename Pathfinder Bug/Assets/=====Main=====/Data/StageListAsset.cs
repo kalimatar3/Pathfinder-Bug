@@ -9,8 +9,8 @@ public class StageListAsset : ScriptableObject
 
     public List<StageData> AllStages => allStages;
 
-    // Hàm để khởi tạo 999 stage data ban đầu (chỉ chạy trong Editor)
-    // Bạn có thể click chuột phải vào asset StageList trong Project view, chọn "Generate 999 Dummy Stages"
+    // Function to initialize 999 dummy stage data (Editor-only)
+    // You can right-click the StageList asset in the Project view and select "Generate 999 Dummy Stages"
     [ContextMenu("Generate 999 Dummy Stages")] 
     void GenerateDummyStages()
     {
@@ -19,17 +19,17 @@ public class StageListAsset : ScriptableObject
         {
             allStages.Add(new StageData { 
                 stageindex = i, 
-                isLock = (i % 5 != 0 && i != 0) // Ví dụ: màn 1, 6, 11... không khóa, màn đầu tiên không khóa
+                isLock = (i % 5 != 0 && i != 0) // Example: stages 1, 6, 11... are unlocked, first stage is unlocked
             });
         }
-        // Đánh dấu asset là đã thay đổi để Unity Editor lưu lại
+        // Mark the asset as dirty so Unity Editor saves changes
         #if UNITY_EDITOR
         UnityEditor.EditorUtility.SetDirty(this);
         #endif
         Debug.Log($"Generated {allStages.Count} dummy stages.");
     }
 
-    // Hàm để cập nhật dữ liệu của một màn chơi (ví dụ: sau khi người chơi hoàn thành)
+    // Function to update data for a specific stage (e.g., after player completes it)
     public void UpdateStageData(int stageIndex, StageData newData)
     {
         if (stageIndex >= 0 && stageIndex < allStages.Count)
