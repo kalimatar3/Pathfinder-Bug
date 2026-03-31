@@ -38,9 +38,16 @@ _The initial screen where players can start their adventure._
 
 _Navigating the dynamically generated maze._
 
-![Gameplay Screensho](README_Images/screenshot_gameplay_hint.png)
+![Gameplay Screenshot](README_Images/screenshot_gameplay_hint.png)
 
 _Players can request a visual hint, displaying the shortest path from the bug's current position to the target gate, calculated using the game's BFS pathfinding system._
+
+**Background Reveal Effect:**
+
+![Background Reveal Gif](README_Images/transmission.gif)
+
+_Experience a dynamic circular reveal effect on the background. The new scene's environment smoothly emerges with an animated,ensuring a visually engaging scene change._
+
 
 ---
 
