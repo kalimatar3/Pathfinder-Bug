@@ -16,8 +16,6 @@ A Unity game project focused on dynamic maze generation, pathfinding, and a robu
   - [DOTween Integration](#dotween-integration)
   - [Testability & Dependency Injection](#testability--dependency-injection)
 - [Getting Started](#getting-started)
-- [License](#license)
-- [Contact](#contact)
 
 ---
 
